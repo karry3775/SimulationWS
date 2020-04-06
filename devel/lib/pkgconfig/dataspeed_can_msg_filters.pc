@@ -1,0 +1,8 @@
+prefix=/home/kartik/Documents/gazebo_practice_ws/devel
+
+Name: dataspeed_can_msg_filters
+Description: Description of dataspeed_can_msg_filters
+Version: 1.0.4
+Cflags: -I/home/kartik/Documents/gazebo_practice_ws/src/autonomous_vehicle/dataspeed_can/dataspeed_can_msg_filters/include
+Libs: -L${prefix}/lib 
+Requires: roscpp dataspeed_can_msgs

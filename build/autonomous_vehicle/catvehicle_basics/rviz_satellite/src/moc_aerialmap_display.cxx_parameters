@@ -1,0 +1,15 @@
+-I/usr/include/qt4
+-I/usr/include/qt4/QtGui
+-I/usr/include/qt4/QtNetwork
+-I/usr/include/qt4/QtCore
+-DROS_BUILD_SHARED_LIBS=1
+-DROS_BUILD_SHARED_LIBS=1
+-D$<$<NOT:$<CONFIG:Debug>>:QT_NO_DEBUG>
+-DQT_GUI_LIB
+-DQT_NETWORK_LIB
+-DQT_CORE_LIB
+-DROS_PACKAGE_NAME="rviz_satellite"
+-DROSCONSOLE_BACKEND_LOG4CXX
+-o
+/home/kartik/Documents/gazebo_practice_ws/build/autonomous_vehicle/catvehicle_basics/rviz_satellite/src/moc_aerialmap_display.cxx
+/home/kartik/Documents/gazebo_practice_ws/src/autonomous_vehicle/catvehicle_basics/rviz_satellite/src/aerialmap_display.h

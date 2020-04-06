@@ -1,0 +1,19 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~pub_pedals" : \b [bool] Publish throttle and brake min: False, default: True, max: True
+- \b "~pub_steering" : \b [bool] Publish steering min: False, default: True, max: True
+- \b "~decel_max" : \b [double] Deceleration limit (m/s^2) min: 0.0, default: 3.0, max: 8.0
+- \b "~accel_max" : \b [double] Acceleration limit (m/s^2) min: 0.0, default: 3.0, max: 8.0
+- \b "~max_lat_accel" : \b [double] Maximum lateral accel (m/s^2) min: 0.0, default: 8.0, max: 10.0
+- \b "~steer_kp" : \b [double] Steering feedback using gyro min: 0.0, default: 0.0, max: 100.0
+- \b "~wheel_radius" : \b [double] Effective tire radius (m) min: 0.2, default: 0.2413, max: 0.3
+- \b "~vehicle_mass" : \b [double] Vehicle mass (kg) min: 1650.0, default: 1736.35, max: 1800.0
+- \b "~fuel_capacity" : \b [double] Fuel tank capacity (gallons) min: 10.0, default: 13.5, max: 20.0
+- \b "~speed_kp" : \b [double] Speed loop proportional gain min: 0.0, default: 2.0, max: 100.0
+- \b "~accel_kp" : \b [double] Accel loop proportional gain min: 0.0, default: 0.4, max: 8.0
+- \b "~accel_ki" : \b [double] Accel loop integral gain min: 0.0, default: 0.1, max: 8.0
+- \b "~brake_deadband" : \b [double] Minimum decel for brakes (m/s^2) min: 0.0, default: 0.1, max: 1.0
+- \b "~accel_tau" : \b [double] LPF time constant (s) min: 0.0, default: 0.5, max: 10.0
+

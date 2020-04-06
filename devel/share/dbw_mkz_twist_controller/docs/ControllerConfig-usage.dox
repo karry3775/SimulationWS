@@ -1,0 +1,20 @@
+\subsubsection usage Usage
+\verbatim
+<node name="dbw_mkz_twist_controller" pkg="dbw_mkz_twist_controller" type="dbw_mkz_twist_controller">
+  <param name="pub_pedals" type="bool" value="True" />
+  <param name="pub_steering" type="bool" value="True" />
+  <param name="decel_max" type="double" value="3.0" />
+  <param name="accel_max" type="double" value="3.0" />
+  <param name="max_lat_accel" type="double" value="8.0" />
+  <param name="steer_kp" type="double" value="0.0" />
+  <param name="wheel_radius" type="double" value="0.2413" />
+  <param name="vehicle_mass" type="double" value="1736.35" />
+  <param name="fuel_capacity" type="double" value="13.5" />
+  <param name="speed_kp" type="double" value="2.0" />
+  <param name="accel_kp" type="double" value="0.4" />
+  <param name="accel_ki" type="double" value="0.1" />
+  <param name="brake_deadband" type="double" value="0.1" />
+  <param name="accel_tau" type="double" value="0.5" />
+</node>
+\endverbatim
+

@@ -1,0 +1,8 @@
+prefix=/home/kartik/Documents/gazebo_practice_ws/devel
+
+Name: obstaclestopper
+Description: Description of obstaclestopper
+Version: 1.0.1
+Cflags: -I/home/kartik/Documents/gazebo_practice_ws/src/autonomous_vehicle/catvehicle_basics/obstaclestopper/include
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs roscpp std_msgs

@@ -1,0 +1,8 @@
+prefix=/home/kartik/Documents/gazebo_practice_ws/install
+
+Name: dataspeed_can_usb
+Description: Description of dataspeed_can_usb
+Version: 1.0.4
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -ldataspeed_can_usb
+Requires: 

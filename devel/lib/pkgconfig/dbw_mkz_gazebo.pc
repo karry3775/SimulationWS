@@ -1,0 +1,8 @@
+prefix=/home/kartik/Documents/gazebo_practice_ws/devel
+
+Name: dbw_mkz_gazebo
+Description: Description of dbw_mkz_gazebo
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

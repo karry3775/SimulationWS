@@ -1,0 +1,8 @@
+prefix=/home/kartik/Documents/gazebo_practice_ws/devel
+
+Name: stereocam_test_description
+Description: Description of stereocam_test_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

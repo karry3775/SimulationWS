@@ -1,0 +1,15 @@
+\subsubsection usage Usage
+\verbatim
+<node name="dbw_mkz_twist_controller" pkg="dbw_mkz_twist_controller" type="dbw_mkz_twist_controller">
+  <param name="publish" type="bool" value="False" />
+  <param name="speed_units" type="int" value="0" />
+  <param name="speed" type="double" value="0.0" />
+  <param name="yaw_method" type="int" value="0" />
+  <param name="yaw_rate" type="double" value="0.0" />
+  <param name="yaw_radius" type="double" value="1000000000.0" />
+  <param name="use_limits" type="bool" value="True" />
+  <param name="decel_max" type="double" value="3.0" />
+  <param name="accel_max" type="double" value="3.0" />
+</node>
+\endverbatim
+

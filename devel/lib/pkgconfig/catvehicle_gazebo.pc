@@ -1,0 +1,8 @@
+prefix=/home/kartik/Documents/gazebo_practice_ws/devel
+
+Name: catvehicle_gazebo
+Description: Description of catvehicle_gazebo
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

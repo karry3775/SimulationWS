@@ -1,0 +1,8 @@
+prefix=/home/kartik/Documents/gazebo_practice_ws/devel
+
+Name: can_sim_tc
+Description: Description of can_sim_tc
+Version: 0.0.0
+Cflags: -I/home/kartik/Documents/gazebo_practice_ws/src/autonomous_vehicle/can_sim_tc/include -I/home/kartik/Documents/gazebo_practice_ws/devel/include
+Libs: -L${prefix}/lib -lcan_sim_tc
+Requires: 

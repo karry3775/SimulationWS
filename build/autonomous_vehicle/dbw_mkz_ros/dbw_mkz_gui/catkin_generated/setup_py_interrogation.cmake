@@ -1,0 +1,6 @@
+set(dbw_mkz_gui_SETUP_PY_VERSION "1.0.4")
+set(dbw_mkz_gui_SETUP_PY_SCRIPTS "")
+set(dbw_mkz_gui_SETUP_PY_PACKAGES "dbw_mkz_gui")
+set(dbw_mkz_gui_SETUP_PY_PACKAGE_DIRS "src/dbw_mkz_gui")
+set(dbw_mkz_gui_SETUP_PY_MODULES "")
+set(dbw_mkz_gui_SETUP_PY_MODULE_DIRS "")

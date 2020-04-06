@@ -1,0 +1,14 @@
+material dragonMat/Diffuse
+{
+  receive_shadows off
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture dragon_scales2.jpg
+      }
+    }
+  }
+}

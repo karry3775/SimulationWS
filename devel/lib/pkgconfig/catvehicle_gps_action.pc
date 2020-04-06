@@ -1,0 +1,8 @@
+prefix=/home/kartik/Documents/gazebo_practice_ws/devel
+
+Name: catvehicle_gps_action
+Description: Description of catvehicle_gps_action
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

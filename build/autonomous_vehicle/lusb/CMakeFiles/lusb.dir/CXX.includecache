@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kartik/Documents/gazebo_practice_ws/src/autonomous_vehicle/lusb/include/lusb/UsbDevice.h
+stdexcept
+-
+string
+-
+boost/function.hpp
+-
+boost/thread.hpp
+-
+
+/home/kartik/Documents/gazebo_practice_ws/src/autonomous_vehicle/lusb/src/UsbDevice.cpp
+lusb/UsbDevice.h
+/home/kartik/Documents/gazebo_practice_ws/src/autonomous_vehicle/lusb/src/lusb/UsbDevice.h
+libusb-1.0/libusb.h
+-
+

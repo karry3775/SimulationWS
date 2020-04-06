@@ -1,0 +1,8 @@
+prefix=/home/kartik/Documents/gazebo_practice_ws/install
+
+Name: obstaclestopper
+Description: Description of obstaclestopper
+Version: 1.0.1
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs roscpp std_msgs

@@ -1,0 +1,42 @@
+<?xml version = "1.0" ?>
+<robot>
+  <macro name = "link_wheel" params = "name">
+    <link name = "${name}">
+      <!-- pose and inertia -->
+      <inertial>
+        <mass value = "0.2"/>
+        <origin rpy = "0 1.5707 1.5707" xyz = "0 0 0"/>
+        <inertia ixx="0.000526666666667" ixy="0" ixz="0" iyy="0.000526666666667" iyz="0" izz="0.001"/>
+      </inertial>
+      <collision name = "collision_${name}">
+        <origin rpy = "0 1.5707 1.5707" xyz = "0 0 0"/>
+        <geometry>
+          <cylinder radius = "0.1" length = "0.04"/>
+        </geometry>
+      </collision>
+      <visual> <!-- name = "visual_right_wheel"-->
+        <origin rpy = "0 1.5707 1.5707" xyz = "0 0 0"/>
+        <geometry>
+          <cylinder radius = "0.1" length = "0.04"/>
+        </geometry>
+      </visual>
+    </link>
+  </macro>
+
+  <macro name = "joint_wheel" params = "name child origin_xyz">
+    <joint name = "${name}" type = "continuous">
+      <origin rpy = "0 0 0" xyz = "${origin_xyz}"/>
+      <parent link = "link_chassis"/>
+      <child link = "${child}"/>
+      <axis rpy = "0 0 0" xyz = "0 1 0"/>
+      <limit effort = "10000" velocity = "1000"/>
+      <joint_properties damping = "1.0" friction = "1.0"/>
+    </joint>
+  </macro>
+
+  <macro name = "cylinder_inertia" params = "mass l r">
+    <inertia ixx = "${mass*(3*r**2 + l**2)/12}" ixy = "0" ixz = "0"
+      iyy = "${mass*(3*r**2 + l**2)/12}" iyz = "0"
+      izz = "${(mass*r**2)/12}"/>
+  </macro>
+</robot>

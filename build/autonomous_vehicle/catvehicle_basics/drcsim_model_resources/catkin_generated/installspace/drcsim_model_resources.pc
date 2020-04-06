@@ -1,0 +1,8 @@
+prefix=/home/kartik/Documents/gazebo_practice_ws/install
+
+Name: drcsim_model_resources
+Description: Description of drcsim_model_resources
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

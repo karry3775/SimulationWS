@@ -1,0 +1,8 @@
+prefix=/home/kartik/Documents/gazebo_practice_ws/devel
+
+Name: autonomous_vehicle_simple
+Description: Description of autonomous_vehicle_simple
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

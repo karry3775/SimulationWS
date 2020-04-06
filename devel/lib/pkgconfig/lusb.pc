@@ -1,0 +1,8 @@
+prefix=/home/kartik/Documents/gazebo_practice_ws/devel
+
+Name: lusb
+Description: Description of lusb
+Version: 1.0.8
+Cflags: -I/home/kartik/Documents/gazebo_practice_ws/src/autonomous_vehicle/lusb/include -I/usr/include
+Libs: -L${prefix}/lib -llusb /usr/lib/x86_64-linux-gnu/libboost_thread.so /usr/lib/x86_64-linux-gnu/libboost_system.so /usr/lib/x86_64-linux-gnu/libboost_chrono.so /usr/lib/x86_64-linux-gnu/libboost_date_time.so /usr/lib/x86_64-linux-gnu/libboost_atomic.so /usr/lib/x86_64-linux-gnu/libpthread.so
+Requires: 

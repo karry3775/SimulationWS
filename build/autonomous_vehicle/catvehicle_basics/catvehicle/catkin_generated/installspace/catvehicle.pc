@@ -1,0 +1,8 @@
+prefix=/home/kartik/Documents/gazebo_practice_ws/install
+
+Name: catvehicle
+Description: Description of catvehicle
+Version: 2.0.2
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lcatvehicle
+Requires: geometry_msgs roscpp rospy sensor_msgs std_msgs velodyne_pointcloud tf

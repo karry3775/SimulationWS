@@ -1,0 +1,8 @@
+prefix=/home/kartik/Documents/gazebo_practice_ws/devel
+
+Name: dbw_mkz_joystick_demo
+Description: Description of dbw_mkz_joystick_demo
+Version: 1.0.4
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,14 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~publish" : \b [bool] Publish twist command min: False, default: False, max: True
+- \b "~speed_units" : \b [int] Speed units (mps/mph/kph) min: -2147483648, default: 0, max: 2147483647
+- \b "~speed" : \b [double] Target speed (variable units) min: 0.0, default: 0.0, max: 150.0
+- \b "~yaw_method" : \b [int] Yaw method (yaw_rate or radius) min: -2147483648, default: 0, max: 2147483647
+- \b "~yaw_rate" : \b [double] Target yaw rate (rad/s) min: -3.0, default: 0.0, max: 3.0
+- \b "~yaw_radius" : \b [double] Target radius (1/m) min: -1000000000.0, default: 1000000000.0, max: 1000000000.0
+- \b "~use_limits" : \b [bool] Use limits min: False, default: True, max: True
+- \b "~decel_max" : \b [double] Deceleration limit (m/s^2) min: 0.0, default: 3.0, max: 8.0
+- \b "~accel_max" : \b [double] Acceleration limit (m/s^2) min: 0.0, default: 3.0, max: 8.0
+

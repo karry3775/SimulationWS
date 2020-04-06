@@ -1,0 +1,8 @@
+prefix=/home/kartik/Documents/gazebo_practice_ws/install
+
+Name: jacky_description
+Description: Description of jacky_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

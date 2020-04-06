@@ -1,0 +1,8 @@
+prefix=/home/kartik/Documents/gazebo_practice_ws/devel
+
+Name: rviz_satellite
+Description: Description of rviz_satellite
+Version: 0.0.2
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: nav_msgs sensor_msgs

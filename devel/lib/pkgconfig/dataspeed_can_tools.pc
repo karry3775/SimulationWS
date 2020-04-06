@@ -1,0 +1,8 @@
+prefix=/home/kartik/Documents/gazebo_practice_ws/devel
+
+Name: dataspeed_can_tools
+Description: Description of dataspeed_can_tools
+Version: 1.0.4
+Cflags: 
+Libs: -L${prefix}/lib -ldataspeed_can_tools
+Requires: 
