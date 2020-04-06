@@ -13,7 +13,7 @@
   <xacro:include filename="$(find jacky_description)/urdf/head.xacro" />
   <!-- Arms -->
   <xacro:include filename="$(find jacky_description)/urdf/eyes.xacro" />
-
+  <xacro:include filename="$(find jacky_description)/urdf/eyesUpward.xacro" />
 
   <!-- define a dummy link -->
   <link name = "base_link"/>
@@ -164,43 +164,36 @@
  <eye parent = "head_C" lr = "left" tY = "-1"/>
  <eye parent = "head_C" lr = "right" tY = "1"/>
 
- <!-- <body number = "L" origin_rpy = "0 0 1.0472" origin_xyz = "0.1414 0.1414 0.1"/>
- <eye parent = "head_L" lr = "left" tY = "-1"/>
- <eye parent = "head_L" lr = "right" tY = "1"/>
+ <body number = "U" origin_rpy = "0 -1.5708 0" origin_xyz = "0 0 0.1"/> <!-- origin_xyz = "0.2 0 0.1 -->
+ <eye_upward parent = "head_U" lr = "left_upward" tY = "-1"/>
+ <eye_upward parent = "head_U" lr = "right_upward" tY = "1"/>
 
- <body number = "R" origin_rpy = "0 0 -1.0472" origin_xyz = "0.1414 -0.1414 0.1"/>
- <eye parent = "head_R" lr = "left" tY = "-1"/>
- <eye parent = "head_R" lr = "right" tY = "1"/> -->
-
- <!-- add a monocular camera link  -->
- <joint name="upward_camera_joint" type="fixed">
-    <axis xyz="0 1 0" />
-    <origin xyz="0 0 0.1" rpy="0 -1.5708 0"/>
-    <parent link="link_jacky_chassis"/>
-    <child link="upward_camera_link"/>
-  </joint>
-
-  <!-- Camera -->
-  <link name="upward_camera_link">
+  <!-- Imu -->
+  <link name = "imu_sensor_link">
     <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz = "0 0 0" rpy = "0 0 0"/>
       <geometry>
-        <box size="0.1 0.1 0.1"/>
+        <box size = "0.02 0.02 0.02"/>
       </geometry>
     </collision>
-
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz = "0 0 0" rpy = "0 0 0"/>
       <geometry>
-        <box size="0.1 0.1 0.1"/>
+        <box size = "0.02 0.02 0.02"/>
       </geometry>
-      <material name="red"/>
+      <material name = "white"/>
     </visual>
-
     <inertial>
-      <mass value="1e-5" />
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+      <mass value = "0.001"/>
+      <origin xyz = "0 0 0" rpy = "0 0 0"/>
+      <inertia ixx="0.00000015" ixy="0" ixz="0" iyy="0.00000015" iyz="0" izz="0.00000015" />
     </inertial>
   </link>
+
+  <joint name = "imu_sensor_joint" type = "fixed">
+    <axis xyz = "0 0 1"/>
+    <origin xyz = "0 0 0" rpy = "0 0 0"/>
+    <parent link = "link_jacky_chassis"/>
+    <child link = "imu_sensor_link"/>
+  </joint>
 </robot>

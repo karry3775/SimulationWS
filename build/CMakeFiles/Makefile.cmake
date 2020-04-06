@@ -643,6 +643,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_py.dir/DependInfo.cmake"
   "viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_py.dir/DependInfo.cmake"
   "viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_lisp.dir/DependInfo.cmake"
+  "viso2/viso2_ros/CMakeFiles/stereo_odometer_upward.dir/DependInfo.cmake"
   "viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_cpp.dir/DependInfo.cmake"
   "viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_eus.dir/DependInfo.cmake"
   "viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/DependInfo.cmake"

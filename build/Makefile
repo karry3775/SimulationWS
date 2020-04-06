@@ -1325,6 +1325,19 @@ nodelet_generate_messages_lisp/fast:
 .PHONY : nodelet_generate_messages_lisp/fast
 
 #=============================================================================
+# Target rules for targets named stereo_odometer_upward
+
+# Build rule for target.
+stereo_odometer_upward: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 stereo_odometer_upward
+.PHONY : stereo_odometer_upward
+
+# fast build rule for target.
+stereo_odometer_upward/fast:
+	$(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_upward.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_upward.dir/build
+.PHONY : stereo_odometer_upward/fast
+
+#=============================================================================
 # Target rules for targets named topic_tools_generate_messages_cpp
 
 # Build rule for target.
@@ -1842,6 +1855,7 @@ help:
 	@echo "... nodelet_generate_messages_py"
 	@echo "... nav_msgs_generate_messages_py"
 	@echo "... nodelet_generate_messages_lisp"
+	@echo "... stereo_odometer_upward"
 	@echo "... topic_tools_generate_messages_cpp"
 	@echo "... nav_msgs_generate_messages_eus"
 	@echo "... nav_msgs_generate_messages_nodejs"

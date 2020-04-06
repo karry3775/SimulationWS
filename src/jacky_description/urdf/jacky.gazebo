@@ -29,7 +29,7 @@
   </gazebo>
 
   <!-- camera -->
-    <gazebo reference="upward_camera_link">
+    <!-- <gazebo reference="upward_camera_link">
       <sensor type="camera" name="upward_camera">
         <update_rate>30.0</update_rate>
         <camera name="head">
@@ -44,11 +44,11 @@
             <far>300</far>
           </clip>
           <noise>
-            <type>gaussian</type>
+            <type>gaussian</type> -->
             <!-- Noise is sampled independently per pixel on each frame.
                  That pixel's noise value is added to each of its color
                  channels, which at that point lie in the range [0,1]. -->
-            <mean>0.0</mean>
+            <!-- <mean>0.0</mean>
             <stddev>0.007</stddev>
           </noise>
         </camera>
@@ -67,6 +67,27 @@
           <distortionT2>0.0</distortionT2>
         </plugin>
       </sensor>
-    </gazebo>
+    </gazebo> -->
+
+    <!-- Imu -->
+    <gazebo reference="imu_sensor_link">
+    <gravity>true</gravity>
+    <sensor name="imu_sensor" type="imu">
+      <always_on>true</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>__default_topic_</topic>
+      <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+        <topicName>imu</topicName>
+        <bodyName>imu_link</bodyName>
+        <updateRateHZ>10.0</updateRateHZ>
+        <gaussianNoise>0.1</gaussianNoise>
+        <xyzOffset>0 0 0</xyzOffset>
+        <rpyOffset>0 0 0</rpyOffset>
+        <frameName>imu_link</frameName>
+      </plugin>
+      <pose>0 0 0 0 0 0</pose>
+    </sensor>
+  </gazebo>
 
 </robot>

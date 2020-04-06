@@ -44,6 +44,11 @@ add_executable(stereo_odometer
 add_dependencies(stereo_odometer ${catkin_EXPORTED_TARGETS})
 add_dependencies(stereo_odometer ${PROJECT_NAME}_gencpp)
 
+add_executable(stereo_odometer_upward
+  src/stereo_odometer_upward.cpp)
+add_dependencies(stereo_odometer_upward ${catkin_EXPORTED_TARGETS})
+add_dependencies(stereo_odometer_upward ${PROJECT_NAME}_gencpp)
+
 add_executable(mono_odometer
   src/mono_odometer.cpp)
 add_dependencies(mono_odometer ${catkin_EXPORTED_TARGETS})
@@ -55,8 +60,10 @@ add_dependencies(mono_odometer_omnidirectional ${catkin_EXPORTED_TARGETS})
 add_dependencies(mono_odometer_omnidirectional ${PROJECT_NAME}_gencpp)
 
 target_link_libraries(stereo_odometer ${OpenCV_LIBRARIES} ${catkin_LIBRARIES})
+target_link_libraries(stereo_odometer_upward ${OpenCV_LIBRARIES} ${catkin_LIBRARIES})
 find_package(Boost REQUIRED COMPONENTS signals thread)
 include_directories(${Boost_INCLUDE_DIRS})
 target_link_libraries(stereo_odometer ${Boost_LIBRARIES} ${catkin_LIBRARIES})
+target_link_libraries(stereo_odometer_upward ${Boost_LIBRARIES} ${catkin_LIBRARIES})
 target_link_libraries(mono_odometer ${OpenCV_LIBRARIES} ${catkin_LIBRARIES})
 target_link_libraries(mono_odometer_omnidirectional ${OpenCV_LIBRARIES} ${catkin_LIBRARIES})

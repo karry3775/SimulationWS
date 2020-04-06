@@ -49,9 +49,9 @@ bool VisualOdometry::updateMotion () {
 
   // make roll, pitch and z of the global frame 0, by considering the appropriate frames in camera cordinate system.
   //
-  tr_delta[0] = 0;
-  tr_delta[2] = 0;
-  tr_delta[4] = 0;
+  // tr_delta[0] = 0;
+  // tr_delta[2] = 0;
+  // tr_delta[4] = 0;
   cout << "the current tr_delta is: ";
   for(int i = 0; i < tr_delta.size(); i++){
     cout << tr_delta[i] << ", ";

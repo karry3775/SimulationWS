@@ -8,7 +8,6 @@ Panels:
         - /Status1
         - /TF1/Frames1
         - /curPCL1/Status1
-        - /viso2_pose1
       Splitter Ratio: 0.5
     Tree Height: 485
   - Class: rviz/Selection
@@ -74,7 +73,22 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        head_U:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        imu_sensor_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        left_upward:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -104,7 +118,7 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        upward_camera_link:
+        right_upward:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -319,6 +333,40 @@ Visualization Manager:
       Use Fixed Frame: true
       Use rainbow: true
       Value: false
+    - Angle Tolerance: 0.10000000149011612
+      Class: rviz/Odometry
+      Covariance:
+        Orientation:
+          Alpha: 0.5
+          Color: 255; 255; 127
+          Color Style: Unique
+          Frame: Local
+          Offset: 1
+          Scale: 1
+          Value: true
+        Position:
+          Alpha: 0.30000001192092896
+          Color: 204; 51; 204
+          Scale: 1
+          Value: true
+        Value: true
+      Enabled: true
+      Keep: 1
+      Name: vo_ododm
+      Position Tolerance: 0.10000000149011612
+      Shape:
+        Alpha: 1
+        Axes Length: 1
+        Axes Radius: 0.10000000149011612
+        Color: 255; 25; 0
+        Head Length: 0.30000001192092896
+        Head Radius: 0.10000000149011612
+        Shaft Length: 1
+        Shaft Radius: 0.05000000074505806
+        Value: Arrow
+      Topic: /stereo_odometer/odometry
+      Unreliable: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -354,18 +402,18 @@ Visualization Manager:
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 2.7987937927246094
-        Y: -0.689895510673523
-        Z: -0.6397256851196289
+        X: 1.1827590465545654
+        Y: 0.8478797078132629
+        Z: -0.10937855392694473
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.7747966051101685
+      Pitch: 0.7197967171669006
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 4.186708450317383
+      Yaw: 4.806711673736572
     Saved: ~
 Window Geometry:
   Displays:
