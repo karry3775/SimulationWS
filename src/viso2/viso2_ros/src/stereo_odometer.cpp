@@ -6,6 +6,8 @@
 #include <pcl/point_types.h>
 
 #include <nav_msgs/Odometry.h> // for odom message
+#include <geometry_msgs/Twist.h> // for cmd_vel
+#include <sensor_msgs/Imu.h> // for imu readings
 #include <tf/transform_datatypes.h> // for quat euler conversions
 #include <math.h>
 
@@ -18,9 +20,11 @@
 #include "odometry_params.h"
 
 #include <iostream> // for i/o
+// #include <fstream> // for file handling
 
 // to remove after debugging
 #include <opencv2/highgui/highgui.hpp>
+#include <message_filters/subscriber.h>
 
 namespace viso2_ros
 {
@@ -69,6 +73,9 @@ private:
   int ref_frame_inlier_threshold_; // method 2. Change the reference frame if the number of inliers is low
   Matrix reference_motion_;
   double ref_yaw_; // extra variable to track motion
+  double prev_time_; // for finding the delta for cmd_vel
+  // file variable
+  std::ofstream outfile;
 
 public:
 
@@ -90,7 +97,18 @@ public:
     info_pub_ = local_nh.advertise<VisoInfo>("info", 1);
 
     reference_motion_ = Matrix::eye(4);
+
+    // open the file
+    // outfile.open("pose_data.txt");
+    // create a subscriber for odomCallback
+    //ros::Subscriber odom_sub = local_nh.subscribe<nav_msgs::Odometry>("/ground_truth/state", 1000, boost::bind(&StereoOdometer::odomCallback, this,_1));
+
   }
+
+  ~StereoOdometer(){
+    // outfile.close();
+  }
+
 
 protected:
 
@@ -125,6 +143,16 @@ protected:
                     "  ref_frame_inlier_threshold = " << ref_frame_inlier_threshold_);
   }
 
+  // create an odomCallback function here
+  void odomCallback(const nav_msgs::Odometry::ConstPtr& odom_msg){
+    // first we will just print the message out
+    // ROS_INFO_STREAM("odom callback was called successfully" << std::endl);
+    // // we need to somehow check the contents of tf::Transform
+    // // get the yaw value from the odom_msg
+    // setRotationForIntegratedPose(odom_msg);
+
+  }
+
   void imageCallback(
       const sensor_msgs::ImageConstPtr& l_image_msg,
       const sensor_msgs::ImageConstPtr& r_image_msg,
@@ -138,6 +166,7 @@ protected:
     {
       first_run = true;
       initOdometer(l_info_msg, r_info_msg);
+      prev_time_ = ros::WallTime::now().toSec();
     }
 
     // convert images if necessary
@@ -205,11 +234,52 @@ protected:
         // before passing the values, I need to do two things
         // get the ground truth yaw and formulate the rot_mat in such a way that is consistent with the
         camera_motion.val[1][3] = 0.0;
+        camera_motion.val[0][3] = 0.0;
+
         // now lets subscribe to the odom frame
         ros::NodeHandle local_nh("~");
+
+        // lets wait for jacky/cmd_vel (geometry_msgs::Twist)
+        boost::shared_ptr<geometry_msgs::Twist const> shared_cmd_vel_ptr;
+        geometry_msgs::Twist cmd_vel_msg;
+        shared_cmd_vel_ptr = ros::topic::waitForMessage<geometry_msgs::Twist>("/jacky/cmd_vel", local_nh);
+        if(shared_cmd_vel_ptr != NULL){
+          cmd_vel_msg = *shared_cmd_vel_ptr;
+        }
+        // find delta_x using just the cmd_vel
+
+        // first get the current time
+        double cur_time = ros::WallTime::now().toSec();
+        double delta_time_cmd = cur_time - prev_time_;
+        prev_time_ = cur_time;
+
+        double delta_x_cmd = cmd_vel_msg.linear.x * delta_time_cmd;
+
+        // lets wait for imu messages
+        // boost::shared_ptr<sensor_msgs::Imu const> shared_imu_ptr;
+        // sensor_msgs::Imu imu_msg;
+        // shared_imu_ptr = ros::topic::waitForMessage<sensor_msgs::Imu>("/imu", local_nh);
+        //
+        // if(shared_imu_ptr != NULL){
+        //   imu_msg = *shared_imu_ptr;
+        // }
+
+        if(cmd_vel_msg.linear.x == 0){
+          // this means we are definetely at rest
+          // trust the cmd_vel_msg
+          camera_motion.val[2][3] = 0.0;
+        }
+        else{
+          // if moving then simply
+          camera_motion.val[2][3] = 0.80 * delta_x_cmd + 0.20 * camera_motion.val[2][3];
+        }
+
         boost::shared_ptr<nav_msgs::Odometry const> shared_odom_msg_ptr;
         nav_msgs::Odometry odom_msg;
-        shared_odom_msg_ptr = ros::topic::waitForMessage<nav_msgs::Odometry>("/odom",local_nh);
+        // most likely this waiting for ground truth might be causing it to differ
+        // lets actually check how much will the thing have to wait
+        // if its not that much then this possibly can be the issue
+        shared_odom_msg_ptr = ros::topic::waitForMessage<nav_msgs::Odometry>("/ground_truth/state",local_nh);
         if(shared_odom_msg_ptr != NULL){
           odom_msg = *shared_odom_msg_ptr;
         }
@@ -229,11 +299,18 @@ protected:
         //   camera_motion.val[0][0], camera_motion.val[0][1], camera_motion.val[0][2],
         //   camera_motion.val[1][0], camera_motion.val[1][1], camera_motion.val[1][2],
         //   camera_motion.val[2][0], camera_motion.val[2][1], camera_motion.val[2][2]);
-        tf::Matrix3x3 rot_mat(cos_tht, 0, sin_tht,
-                              0, 1, 0,
+        tf::Matrix3x3 rot_mat(cos_tht , 0, sin_tht,
+                              0       , 1,       0,
                               -sin_tht, 0, cos_tht);
         tf::Vector3 t(camera_motion.val[0][3], camera_motion.val[1][3], camera_motion.val[2][3]);
         tf::Transform delta_transform(rot_mat, t);
+
+        // RECORD DATA INTO A FILE
+        // store yaw information
+        // store delta_x, delta_z (which will map to -delta_y and delta_x)
+      //  double delta_x = camera_motion.val[2][3];
+      //  double delta_y = -camera_motion.val[0][3];
+      //  outfile << delta_x << "," << delta_y << "," << yaw << "," << odom_msg.pose.pose.position.x << "," << odom_msg.pose.pose.position.y << std::endl;
 
         setPoseCovariance(STANDARD_POSE_COVARIANCE);
         setTwistCovariance(STANDARD_TWIST_COVARIANCE);
@@ -364,6 +441,8 @@ protected:
       ROS_ERROR("cv_bridge exception: %s", e.what());
     }
   }
+
+
 };
 
 } // end of namespace
@@ -384,7 +463,6 @@ int main(int argc, char **argv)
 
   std::string transport = argc > 1 ? argv[1] : "raw";
   viso2_ros::StereoOdometer odometer(transport);
-
   ros::spin();
   return 0;
 }

@@ -202,3 +202,6 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+add_executable(ground_truth_sub src/ground_truth_sub.cpp)
+target_link_libraries(ground_truth_sub ${catkin_LIBRARIES})

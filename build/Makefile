@@ -1195,6 +1195,19 @@ sensor_msgs_generate_messages_py/fast:
 .PHONY : sensor_msgs_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named ground_truth_sub
+
+# Build rule for target.
+ground_truth_sub: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ground_truth_sub
+.PHONY : ground_truth_sub
+
+# fast build rule for target.
+ground_truth_sub/fast:
+	$(MAKE) -f jacky_description/CMakeFiles/ground_truth_sub.dir/build.make jacky_description/CMakeFiles/ground_truth_sub.dir/build
+.PHONY : ground_truth_sub/fast
+
+#=============================================================================
 # Target rules for targets named mono_odometer
 
 # Build rule for target.
@@ -1845,6 +1858,7 @@ help:
 	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... tf_generate_messages_py"
 	@echo "... sensor_msgs_generate_messages_py"
+	@echo "... ground_truth_sub"
 	@echo "... mono_odometer"
 	@echo "... stereo_odometer"
 	@echo "... mono_odometer_omnidirectional"

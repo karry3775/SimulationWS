@@ -43,7 +43,7 @@ def compare_cb(gt_msg, vo_msg):
 if __name__ == "__main__":
 
     try:
-        gt_sub = message_filters.Subscriber("/odom", Odometry)
+        gt_sub = message_filters.Subscriber("/ground_truth/state", Odometry)
         vo_sub = message_filters.Subscriber("/stereo_odometer/pose", PoseStamped)
         combined_sub = message_filters.ApproximateTimeSynchronizer([gt_sub, vo_sub], queue_size = 5, slop = 0.1)
         combined_sub.registerCallback(compare_cb)

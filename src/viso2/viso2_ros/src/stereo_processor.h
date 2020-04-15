@@ -28,6 +28,7 @@ private:
   // subscriber
   image_transport::SubscriberFilter left_sub_, right_sub_;
   message_filters::Subscriber<sensor_msgs::CameraInfo> left_info_sub_, right_info_sub_;
+  message_filters::Subscriber<nav_msgs::Odometry> odom_sub_;
   typedef message_filters::sync_policies::ExactTime<sensor_msgs::Image, sensor_msgs::Image, sensor_msgs::CameraInfo, sensor_msgs::CameraInfo> ExactPolicy;
   typedef message_filters::sync_policies::ApproximateTime<sensor_msgs::Image, sensor_msgs::Image, sensor_msgs::CameraInfo, sensor_msgs::CameraInfo> ApproximatePolicy;
   typedef message_filters::Synchronizer<ExactPolicy> ExactSync;
@@ -118,8 +119,10 @@ protected:
     right_sub_.subscribe(it, right_topic, 3, transport);
     left_info_sub_.subscribe(nh, left_info_topic, 3);
     right_info_sub_.subscribe(nh, right_info_topic, 3);
+    odom_sub_.subscribe(nh, "/ground_truth/state", 3);
 
     // Complain every 15s if the topics appear unsynchronized
+    odom_sub_.registerCallback(boost::bind(&StereoProcessor::odomCallback, this, _1)); // very important line
     left_sub_.registerCallback(boost::bind(StereoProcessor::increment, &left_received_));
     right_sub_.registerCallback(boost::bind(StereoProcessor::increment, &right_received_));
     left_info_sub_.registerCallback(boost::bind(StereoProcessor::increment, &left_info_received_));
@@ -153,9 +156,12 @@ protected:
                              const sensor_msgs::CameraInfoConstPtr& l_info_msg,
                              const sensor_msgs::CameraInfoConstPtr& r_info_msg) = 0;
 
+  // virtual odom call back function
+  virtual void odomCallback(const nav_msgs::Odometry::ConstPtr& msg) = 0;
+
+
 };
 
 } // end of namespace
 
 #endif
-

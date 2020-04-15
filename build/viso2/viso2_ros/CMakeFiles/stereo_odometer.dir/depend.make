@@ -123,6 +123,7 @@ viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/src/stereo_odometer.cpp.o: /opt/r
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/src/stereo_odometer.cpp.o: /opt/ros/melodic/include/sensor_msgs/ChannelFloat32.h
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/src/stereo_odometer.cpp.o: /opt/ros/melodic/include/sensor_msgs/CompressedImage.h
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/src/stereo_odometer.cpp.o: /opt/ros/melodic/include/sensor_msgs/Image.h
+viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/src/stereo_odometer.cpp.o: /opt/ros/melodic/include/sensor_msgs/Imu.h
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/src/stereo_odometer.cpp.o: /opt/ros/melodic/include/sensor_msgs/PointCloud.h
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/src/stereo_odometer.cpp.o: /opt/ros/melodic/include/sensor_msgs/PointCloud2.h
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/src/stereo_odometer.cpp.o: /opt/ros/melodic/include/sensor_msgs/PointField.h

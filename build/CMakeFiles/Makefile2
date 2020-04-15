@@ -347,7 +347,7 @@ gtest/googlemock/gtest/preinstall:
 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/all: gtest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=10,11 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=12,13 "Built target gtest_main"
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -379,7 +379,7 @@ clean: gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/clean
 gtest/googlemock/gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=8,9 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=10,11 "Built target gtest"
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -430,7 +430,7 @@ viso2/libviso2/preinstall:
 viso2/libviso2/CMakeFiles/viso2.dir/all:
 	$(MAKE) -f viso2/libviso2/CMakeFiles/viso2.dir/build.make viso2/libviso2/CMakeFiles/viso2.dir/depend
 	$(MAKE) -f viso2/libviso2/CMakeFiles/viso2.dir/build.make viso2/libviso2/CMakeFiles/viso2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=20,21,22,23,24,25,26,27,28,29 "Built target viso2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=22,23,24,25,26,27,28,29,30,31 "Built target viso2"
 .PHONY : viso2/libviso2/CMakeFiles/viso2.dir/all
 
 # Include target in all.
@@ -2816,12 +2816,12 @@ clean: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/sensor_msgs_generate_m
 # Directory level rules for directory jacky_description
 
 # Convenience name for "all" pass in the directory.
-jacky_description/all:
+jacky_description/all: jacky_description/CMakeFiles/ground_truth_sub.dir/all
 
 .PHONY : jacky_description/all
 
 # Convenience name for "clean" pass in the directory.
-jacky_description/clean:
+jacky_description/clean: jacky_description/CMakeFiles/ground_truth_sub.dir/clean
 
 .PHONY : jacky_description/clean
 
@@ -2829,6 +2829,43 @@ jacky_description/clean:
 jacky_description/preinstall:
 
 .PHONY : jacky_description/preinstall
+
+#=============================================================================
+# Target rules for target jacky_description/CMakeFiles/ground_truth_sub.dir
+
+# All Build rule for target.
+jacky_description/CMakeFiles/ground_truth_sub.dir/all:
+	$(MAKE) -f jacky_description/CMakeFiles/ground_truth_sub.dir/build.make jacky_description/CMakeFiles/ground_truth_sub.dir/depend
+	$(MAKE) -f jacky_description/CMakeFiles/ground_truth_sub.dir/build.make jacky_description/CMakeFiles/ground_truth_sub.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=8,9 "Built target ground_truth_sub"
+.PHONY : jacky_description/CMakeFiles/ground_truth_sub.dir/all
+
+# Include target in all.
+all: jacky_description/CMakeFiles/ground_truth_sub.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+jacky_description/CMakeFiles/ground_truth_sub.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 jacky_description/CMakeFiles/ground_truth_sub.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles 0
+.PHONY : jacky_description/CMakeFiles/ground_truth_sub.dir/rule
+
+# Convenience name for target.
+ground_truth_sub: jacky_description/CMakeFiles/ground_truth_sub.dir/rule
+
+.PHONY : ground_truth_sub
+
+# clean rule for target.
+jacky_description/CMakeFiles/ground_truth_sub.dir/clean:
+	$(MAKE) -f jacky_description/CMakeFiles/ground_truth_sub.dir/build.make jacky_description/CMakeFiles/ground_truth_sub.dir/clean
+.PHONY : jacky_description/CMakeFiles/ground_truth_sub.dir/clean
+
+# clean rule for target.
+clean: jacky_description/CMakeFiles/ground_truth_sub.dir/clean
+
+.PHONY : clean
 
 #=============================================================================
 # Directory level rules for directory m2wr_description
@@ -3003,7 +3040,7 @@ viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: viso2/viso2_ros/CMakeFiles/vis
 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_eus.dir/all
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/mono_odometer.dir/build.make viso2/viso2_ros/CMakeFiles/mono_odometer.dir/depend
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/mono_odometer.dir/build.make viso2/viso2_ros/CMakeFiles/mono_odometer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=12,13 "Built target mono_odometer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=14,15 "Built target mono_odometer"
 .PHONY : viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all
 
 # Include target in all.
@@ -3124,7 +3161,7 @@ viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: viso2/viso2_ros/CMakeFiles/v
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_eus.dir/all
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/depend
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=16,17 "Built target stereo_odometer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=18,19 "Built target stereo_odometer"
 .PHONY : viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all
 
 # Include target in all.
@@ -3245,7 +3282,7 @@ viso2/viso2_ros/CMakeFiles/mono_odometer_omnidirectional.dir/all: viso2/viso2_ro
 viso2/viso2_ros/CMakeFiles/mono_odometer_omnidirectional.dir/all: viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_eus.dir/all
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/mono_odometer_omnidirectional.dir/build.make viso2/viso2_ros/CMakeFiles/mono_odometer_omnidirectional.dir/depend
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/mono_odometer_omnidirectional.dir/build.make viso2/viso2_ros/CMakeFiles/mono_odometer_omnidirectional.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=14,15 "Built target mono_odometer_omnidirectional"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=16,17 "Built target mono_odometer_omnidirectional"
 .PHONY : viso2/viso2_ros/CMakeFiles/mono_odometer_omnidirectional.dir/all
 
 # Include target in all.
@@ -3315,7 +3352,7 @@ viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_py.dir/all: spawn_robot_t
 viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_py.dir/all: viso2/viso2_ros/CMakeFiles/_viso2_ros_generate_messages_check_deps_VisoInfo.dir/all
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_py.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_py.dir/depend
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_py.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=35,36 "Built target viso2_ros_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=37,38 "Built target viso2_ros_generate_messages_py"
 .PHONY : viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3591,7 +3628,7 @@ viso2/viso2_ros/CMakeFiles/stereo_odometer_upward.dir/all: viso2/viso2_ros/CMake
 viso2/viso2_ros/CMakeFiles/stereo_odometer_upward.dir/all: viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_eus.dir/all
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_upward.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_upward.dir/depend
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_upward.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_upward.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=18,19 "Built target stereo_odometer_upward"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=20,21 "Built target stereo_odometer_upward"
 .PHONY : viso2/viso2_ros/CMakeFiles/stereo_odometer_upward.dir/all
 
 # Include target in all.
@@ -4365,7 +4402,7 @@ viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_nodejs.dir/all: spawn_rob
 viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_nodejs.dir/all: viso2/viso2_ros/CMakeFiles/_viso2_ros_generate_messages_check_deps_VisoInfo.dir/all
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_nodejs.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_nodejs.dir/depend
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_nodejs.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=34 "Built target viso2_ros_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=36 "Built target viso2_ros_generate_messages_nodejs"
 .PHONY : viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4439,7 +4476,7 @@ viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_cpp.dir/all: spawn_robot_
 viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_cpp.dir/all: viso2/viso2_ros/CMakeFiles/_viso2_ros_generate_messages_check_deps_VisoInfo.dir/all
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_cpp.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_cpp.dir/depend
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_cpp.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=30 "Built target viso2_ros_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=32 "Built target viso2_ros_generate_messages_cpp"
 .PHONY : viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4504,7 +4541,7 @@ viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_eus.dir/all: spawn_robot_
 viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_eus.dir/all: viso2/viso2_ros/CMakeFiles/_viso2_ros_generate_messages_check_deps_VisoInfo.dir/all
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_eus.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_eus.dir/depend
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_eus.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=31,32 "Built target viso2_ros_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=33,34 "Built target viso2_ros_generate_messages_eus"
 .PHONY : viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4633,7 +4670,7 @@ viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_lisp.dir/all: spawn_robot
 viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_lisp.dir/all: viso2/viso2_ros/CMakeFiles/_viso2_ros_generate_messages_check_deps_VisoInfo.dir/all
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_lisp.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_lisp.dir/depend
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_lisp.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=33 "Built target viso2_ros_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=35 "Built target viso2_ros_generate_messages_lisp"
 .PHONY : viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.

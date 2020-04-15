@@ -47,7 +47,6 @@ private:
   boost::array<double, 36> twist_covariance_;
 
 public:
-
   OdometerBase()
   {
     // Read local parameters
@@ -76,6 +75,14 @@ public:
     pose_covariance_.assign(0.0);
     twist_covariance_.assign(0.0);
   }
+
+	void setRotationForIntegratedPose(const nav_msgs::Odometry::ConstPtr& odom_msg){
+		tf::Quaternion q(odom_msg->pose.pose.orientation.x, odom_msg->pose.pose.orientation.y, odom_msg->pose.pose.orientation.z, odom_msg->pose.pose.orientation.w);
+    tf::Matrix3x3 m(q);
+    double roll, pitch, yaw;
+    m.getRPY(roll, pitch, yaw);
+    integrated_pose_.setRotation(tf::createQuaternionFromRPY(0, -yaw, 0));
+	}
 
 protected:
 
