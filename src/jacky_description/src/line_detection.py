@@ -81,7 +81,7 @@ def image_cb(msg):
                 else:
                     ori = f_ori3
 
-                print("Orientaions --> f_ori : {}, f_ori1 : {}, f_ori2 : {}, f_ori3 : {}, ORI : {}".format(m.degrees(f_ori), m.degrees(f_ori1), m.degrees(f_ori2), m.degrees(f_ori3), m.degrees(ori)))
+                print("Orientations --> f_ori : {}, f_ori1 : {}, f_ori2 : {}, f_ori3 : {}, ORI : {}".format(m.degrees(f_ori), m.degrees(f_ori1), m.degrees(f_ori2), m.degrees(f_ori3), m.degrees(ori)))
 
         # create euler angles
         roll = 0

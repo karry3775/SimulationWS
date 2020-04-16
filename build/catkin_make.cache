@@ -1,2 +1,2 @@
-jacky_description:m2wr_description:my_robot_description:my_simulations:spawn_robot_tools/spawn_robot_tools_pkg:viso2/libviso2:viso2/viso2:viso2/viso2_ros
+jacky_description:m2wr_description:my_robot_description:my_simulations:rf2o_laser_odometry:spawn_robot_tools/spawn_robot_tools_pkg:viso2/libviso2:viso2/viso2:viso2/viso2_ros
 -DCATKIN_DEVEL_PREFIX=/home/kartik/Documents/gazebo_practice_ws/devel -DCMAKE_INSTALL_PREFIX=/home/kartik/Documents/gazebo_practice_ws/install -G Unix Makefiles
