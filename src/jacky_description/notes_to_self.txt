@@ -1,0 +1,5 @@
+# The current idea of making delta x and delta y zero when cmd_vel is entirely zero, making delta y and delta x totally depend on VO when the robot is simply rotating and rest of the time setting delta y to zero, delta x a combination of both, seems to underestimate the robot's motion.
+
+# Maybe there was also a transformation issue with the VO, because coinciding it with the base_link drastically improved the performance
+
+# lets also add one more test when we use cmd_vel partially.\ or just moodify the without cmd vel for now.

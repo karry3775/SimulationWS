@@ -13,14 +13,14 @@ def cmd_pub():
         print("listening for keys")
         # need to listen to arrow keys
         if keyboard.is_pressed("up"):
-            cmd.linear.x = 0.25 + random.uniform(-1, 1) * 0.25 * 0.1# noise
+            cmd.linear.x = 0.25
             cmd.angular.z = 0.0
         elif keyboard.is_pressed("left"):
             cmd.linear.x = 0.0
-            cmd.angular.z = 0.5 + random.uniform(-1, 1) * 0.5 * 0.1# noise
+            cmd.angular.z = 0.5
         elif keyboard.is_pressed("right"):
             cmd.linear.x = 0.0
-            cmd.angular.z = -0.5 + random.uniform(-1, 1)  * 0.5 * 0.1# noise
+            cmd.angular.z = -0.5
         else:
             cmd.linear.x = 0.0
             cmd.angular.z = 0.0

@@ -1,0 +1,9 @@
+roslaunch jacky_description jacky_spawn.launch
+roslaunch jacky_description jacky_rviz.launch 
+rosrun viso2_ros stereo_odometer_with_dely_assumption stereo:=stereo image:=image_rect _approximate_sync:=True
+rosrun viso2_ros stereo_odometer_without_dely_assumption stereo:=stereo image:=image_rect _approximate_sync:=True
+rosrun jacky_description dely_benefit.py
+
+
+# In another folder
+rosrun jacky_description jacky_teleoperate.py
