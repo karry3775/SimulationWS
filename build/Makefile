@@ -1481,6 +1481,19 @@ nav_msgs_generate_messages_cpp/fast:
 .PHONY : nav_msgs_generate_messages_cpp/fast
 
 #=============================================================================
+# Target rules for targets named stereo_odometer_raw
+
+# Build rule for target.
+stereo_odometer_raw: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 stereo_odometer_raw
+.PHONY : stereo_odometer_raw
+
+# fast build rule for target.
+stereo_odometer_raw/fast:
+	$(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/build
+.PHONY : stereo_odometer_raw/fast
+
+#=============================================================================
 # Target rules for targets named nav_msgs_generate_messages_lisp
 
 # Build rule for target.
@@ -1958,6 +1971,7 @@ help:
 	@echo "... topic_tools_generate_messages_lisp"
 	@echo "... nodelet_topic_tools_gencfg"
 	@echo "... nav_msgs_generate_messages_cpp"
+	@echo "... stereo_odometer_raw"
 	@echo "... nav_msgs_generate_messages_lisp"
 	@echo "... nodelet_generate_messages_cpp"
 	@echo "... bond_generate_messages_py"

@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<%
+  shelf_unit_size = [2.405, 1.268875]
+  shelf_size = [25, 1]
+  shelf_levels_ = [0, 1.38, 3.57, 5.768]
+  shelf_levels = [0]
+  crate_width = 1.016
+  crate_offset = 0.01
+%>
+<sdf version="1.6">
+  <model name="Warehouse_Shelf">
+    <%
+      for i in 0..(shelf_size[1] - 1)
+    %>
+    <include>
+      <name>Shelf_Side_<%= i %></name>
+      <uri>model://simulation_robots_worlds/media/Shelf_Side</uri>
+      <pose>-1.2025 <%= i*shelf_unit_size[1] %> 0 0 0 0</pose>
+    </include>
+    <% end %>
+    <%
+      for x in 0..(shelf_size[0] - 1)
+      for y in 0..(shelf_size[1] - 1)
+    %>
+    <include>
+      <name>Shelf_Unit_<%= y*shelf_size[0] + x %></name>
+      <uri>model://simulation_robots_worlds/media/Shelf_Unit</uri>
+      <pose> <%= x*shelf_unit_size[0] %> <%= y*shelf_unit_size[1] %> 0 0 0 0</pose>
+    </include>
+    <%
+      shelf_levels.each do |z|
+    %>
+    <include>
+      <name>Crate_0_<%= z %>_<%= y*shelf_size[0] + x %></name>
+      <uri>model://simulation_robots_worlds/media/Crate</uri>
+      <pose> <%= x*shelf_unit_size[0] + (crate_width/2 + crate_offset) %> <%= y*shelf_unit_size[1] %> <%= z %> 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>Crate_1_<%= z %>_<%= y*shelf_size[0] + x %></name>
+      <uri>model://simulation_robots_worlds/media/Crate</uri>
+      <pose> <%= x*shelf_unit_size[0] - (crate_width/2 + crate_offset) %> <%= y*shelf_unit_size[1] %> <%= z %> 0 0 0</pose>
+    </include>
+
+    <% end %>
+    <% end %>
+    <% end %>
+  </model>
+</sdf>

@@ -430,7 +430,7 @@ viso2/libviso2/preinstall:
 viso2/libviso2/CMakeFiles/viso2.dir/all:
 	$(MAKE) -f viso2/libviso2/CMakeFiles/viso2.dir/build.make viso2/libviso2/CMakeFiles/viso2.dir/depend
 	$(MAKE) -f viso2/libviso2/CMakeFiles/viso2.dir/build.make viso2/libviso2/CMakeFiles/viso2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=34,35,36,37,38,39,40,41,42,43 "Built target viso2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=36,37,38,39,40,41,42,43,44,45 "Built target viso2"
 .PHONY : viso2/libviso2/CMakeFiles/viso2.dir/all
 
 # Include target in all.
@@ -2896,6 +2896,7 @@ viso2/viso2_ros/all: viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all
 viso2/viso2_ros/all: viso2/viso2_ros/CMakeFiles/mono_odometer_omnidirectional.dir/all
 viso2/viso2_ros/all: viso2/viso2_ros/CMakeFiles/stereo_odometer_upward.dir/all
 viso2/viso2_ros/all: viso2/viso2_ros/CMakeFiles/stereo_odometer_without_cmd_vel.dir/all
+viso2/viso2_ros/all: viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all
 viso2/viso2_ros/all: viso2/viso2_ros/CMakeFiles/stereo_odometer_with_yaw_correction.dir/all
 viso2/viso2_ros/all: viso2/viso2_ros/CMakeFiles/stereo_odometer_with_cmd_vel.dir/all
 viso2/viso2_ros/all: viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages.dir/all
@@ -2925,6 +2926,7 @@ viso2/viso2_ros/clean: viso2/viso2_ros/CMakeFiles/bond_generate_messages_lisp.di
 viso2/viso2_ros/clean: viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_lisp.dir/clean
 viso2/viso2_ros/clean: viso2/viso2_ros/CMakeFiles/nodelet_topic_tools_gencfg.dir/clean
 viso2/viso2_ros/clean: viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_cpp.dir/clean
+viso2/viso2_ros/clean: viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/clean
 viso2/viso2_ros/clean: viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_lisp.dir/clean
 viso2/viso2_ros/clean: viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_cpp.dir/clean
 viso2/viso2_ros/clean: viso2/viso2_ros/CMakeFiles/bond_generate_messages_py.dir/clean
@@ -3173,7 +3175,7 @@ viso2/viso2_ros/CMakeFiles/stereo_odometer_without_yaw_correction.dir/all: viso2
 viso2/viso2_ros/CMakeFiles/stereo_odometer_without_yaw_correction.dir/all: viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_eus.dir/all
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_without_yaw_correction.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_without_yaw_correction.dir/depend
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_without_yaw_correction.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_without_yaw_correction.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=32,33 "Built target stereo_odometer_without_yaw_correction"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=34,35 "Built target stereo_odometer_without_yaw_correction"
 .PHONY : viso2/viso2_ros/CMakeFiles/stereo_odometer_without_yaw_correction.dir/all
 
 # Include target in all.
@@ -3294,7 +3296,7 @@ viso2/viso2_ros/CMakeFiles/stereo_odometer_with_dely_assumption.dir/all: viso2/v
 viso2/viso2_ros/CMakeFiles/stereo_odometer_with_dely_assumption.dir/all: viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_eus.dir/all
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_with_dely_assumption.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_with_dely_assumption.dir/depend
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_with_dely_assumption.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_with_dely_assumption.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=24,25 "Built target stereo_odometer_with_dely_assumption"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=26,27 "Built target stereo_odometer_with_dely_assumption"
 .PHONY : viso2/viso2_ros/CMakeFiles/stereo_odometer_with_dely_assumption.dir/all
 
 # Include target in all.
@@ -3606,7 +3608,7 @@ viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_py.dir/all: spawn_robot_t
 viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_py.dir/all: viso2/viso2_ros/CMakeFiles/_viso2_ros_generate_messages_check_deps_VisoInfo.dir/all
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_py.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_py.dir/depend
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_py.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=49,50 "Built target viso2_ros_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=51,52 "Built target viso2_ros_generate_messages_py"
 .PHONY : viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3882,7 +3884,7 @@ viso2/viso2_ros/CMakeFiles/stereo_odometer_upward.dir/all: viso2/viso2_ros/CMake
 viso2/viso2_ros/CMakeFiles/stereo_odometer_upward.dir/all: viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_eus.dir/all
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_upward.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_upward.dir/depend
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_upward.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_upward.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=20,21 "Built target stereo_odometer_upward"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=22,23 "Built target stereo_odometer_upward"
 .PHONY : viso2/viso2_ros/CMakeFiles/stereo_odometer_upward.dir/all
 
 # Include target in all.
@@ -4067,7 +4069,7 @@ viso2/viso2_ros/CMakeFiles/stereo_odometer_without_cmd_vel.dir/all: viso2/viso2_
 viso2/viso2_ros/CMakeFiles/stereo_odometer_without_cmd_vel.dir/all: viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_eus.dir/all
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_without_cmd_vel.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_without_cmd_vel.dir/depend
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_without_cmd_vel.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_without_cmd_vel.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=28,29 "Built target stereo_odometer_without_cmd_vel"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=30,31 "Built target stereo_odometer_without_cmd_vel"
 .PHONY : viso2/viso2_ros/CMakeFiles/stereo_odometer_without_cmd_vel.dir/all
 
 # Include target in all.
@@ -4254,6 +4256,127 @@ viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_cpp.dir/clean:
 
 # clean rule for target.
 clean: viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_cpp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir
+
+# All Build rule for target.
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: viso2/libviso2/CMakeFiles/viso2.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/dynamic_reconfigure_gencfg.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/tf2_msgs_generate_messages_py.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/tf2_msgs_generate_messages_eus.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/actionlib_generate_messages_py.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/actionlib_generate_messages_nodejs.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/actionlib_generate_messages_eus.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/std_srvs_generate_messages_lisp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/std_srvs_generate_messages_cpp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/tf_generate_messages_eus.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/tf_generate_messages_cpp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/tf_generate_messages_lisp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/actionlib_generate_messages_cpp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/roscpp_generate_messages_py.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/actionlib_generate_messages_lisp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/std_srvs_generate_messages_nodejs.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/std_srvs_generate_messages_py.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/tf_generate_messages_nodejs.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/std_srvs_generate_messages_eus.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/tf_generate_messages_py.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: spawn_robot_tools/spawn_robot_tools_pkg/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: viso2/viso2_ros/CMakeFiles/bond_generate_messages_nodejs.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_py.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_py.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_lisp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_cpp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_eus.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: viso2/viso2_ros/CMakeFiles/bond_generate_messages_lisp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_lisp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: viso2/viso2_ros/CMakeFiles/nodelet_topic_tools_gencfg.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_cpp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_lisp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_cpp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: viso2/viso2_ros/CMakeFiles/bond_generate_messages_py.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: viso2/viso2_ros/CMakeFiles/bond_generate_messages_eus.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_eus.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_nodejs.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_py.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_eus.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: viso2/viso2_ros/CMakeFiles/pcl_ros_gencfg.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_nodejs.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_py.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: viso2/viso2_ros/CMakeFiles/bond_generate_messages_cpp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: viso2/viso2_ros/CMakeFiles/viso2_ros_gencpp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all: viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_eus.dir/all
+	$(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/depend
+	$(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=20,21 "Built target stereo_odometer_raw"
+.PHONY : viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all
+
+# Include target in all.
+all: viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles 13
+	$(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles 0
+.PHONY : viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/rule
+
+# Convenience name for target.
+stereo_odometer_raw: viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/rule
+
+.PHONY : stereo_odometer_raw
+
+# clean rule for target.
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/clean:
+	$(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/clean
+.PHONY : viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/clean
+
+# clean rule for target.
+clean: viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/clean
 
 .PHONY : clean
 
@@ -4636,7 +4759,7 @@ viso2/viso2_ros/CMakeFiles/stereo_odometer_with_yaw_correction.dir/all: viso2/vi
 viso2/viso2_ros/CMakeFiles/stereo_odometer_with_yaw_correction.dir/all: viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_eus.dir/all
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_with_yaw_correction.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_with_yaw_correction.dir/depend
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_with_yaw_correction.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_with_yaw_correction.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=26,27 "Built target stereo_odometer_with_yaw_correction"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=28,29 "Built target stereo_odometer_with_yaw_correction"
 .PHONY : viso2/viso2_ros/CMakeFiles/stereo_odometer_with_yaw_correction.dir/all
 
 # Include target in all.
@@ -4917,7 +5040,7 @@ viso2/viso2_ros/CMakeFiles/stereo_odometer_with_cmd_vel.dir/all: viso2/viso2_ros
 viso2/viso2_ros/CMakeFiles/stereo_odometer_with_cmd_vel.dir/all: viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_eus.dir/all
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_with_cmd_vel.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_with_cmd_vel.dir/depend
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_with_cmd_vel.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_with_cmd_vel.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=22,23 "Built target stereo_odometer_with_cmd_vel"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=24,25 "Built target stereo_odometer_with_cmd_vel"
 .PHONY : viso2/viso2_ros/CMakeFiles/stereo_odometer_with_cmd_vel.dir/all
 
 # Include target in all.
@@ -5019,7 +5142,7 @@ viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_nodejs.dir/all: spawn_rob
 viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_nodejs.dir/all: viso2/viso2_ros/CMakeFiles/_viso2_ros_generate_messages_check_deps_VisoInfo.dir/all
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_nodejs.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_nodejs.dir/depend
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_nodejs.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=48 "Built target viso2_ros_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=50 "Built target viso2_ros_generate_messages_nodejs"
 .PHONY : viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -5093,7 +5216,7 @@ viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_cpp.dir/all: spawn_robot_
 viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_cpp.dir/all: viso2/viso2_ros/CMakeFiles/_viso2_ros_generate_messages_check_deps_VisoInfo.dir/all
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_cpp.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_cpp.dir/depend
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_cpp.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=44 "Built target viso2_ros_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=46 "Built target viso2_ros_generate_messages_cpp"
 .PHONY : viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -5158,7 +5281,7 @@ viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_eus.dir/all: spawn_robot_
 viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_eus.dir/all: viso2/viso2_ros/CMakeFiles/_viso2_ros_generate_messages_check_deps_VisoInfo.dir/all
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_eus.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_eus.dir/depend
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_eus.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=45,46 "Built target viso2_ros_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=47,48 "Built target viso2_ros_generate_messages_eus"
 .PHONY : viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -5370,7 +5493,7 @@ viso2/viso2_ros/CMakeFiles/stereo_odometer_without_dely_assumption.dir/all: viso
 viso2/viso2_ros/CMakeFiles/stereo_odometer_without_dely_assumption.dir/all: viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_eus.dir/all
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_without_dely_assumption.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_without_dely_assumption.dir/depend
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_without_dely_assumption.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_without_dely_assumption.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=30,31 "Built target stereo_odometer_without_dely_assumption"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=32,33 "Built target stereo_odometer_without_dely_assumption"
 .PHONY : viso2/viso2_ros/CMakeFiles/stereo_odometer_without_dely_assumption.dir/all
 
 # Include target in all.
@@ -5408,7 +5531,7 @@ viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_lisp.dir/all: spawn_robot
 viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_lisp.dir/all: viso2/viso2_ros/CMakeFiles/_viso2_ros_generate_messages_check_deps_VisoInfo.dir/all
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_lisp.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_lisp.dir/depend
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_lisp.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=47 "Built target viso2_ros_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=49 "Built target viso2_ros_generate_messages_lisp"
 .PHONY : viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.

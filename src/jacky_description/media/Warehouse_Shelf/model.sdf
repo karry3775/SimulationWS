@@ -1,0 +1,539 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<sdf version="1.6">
+  <model name="Warehouse_Shelf">
+    
+    <include>
+      <name>Shelf_Side_0</name>
+      <uri>model://Shelf_Side</uri>
+      <pose>-1.2025 0.0 0 0 0 0</pose>
+    </include>
+    
+    
+    <include>
+      <name>Shelf_Unit_0</name>
+      <uri>model://Shelf_Unit</uri>
+      <pose> 0.0 0.0 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <name>Crate_0_0_0</name>
+      <uri>model://Crate</uri>
+      <pose> 0.518 0.0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>Crate_1_0_0</name>
+      <uri>model://Crate</uri>
+      <pose> -0.518 0.0 0 0 0 0</pose>
+    </include>
+
+    
+    
+    
+    <include>
+      <name>Shelf_Unit_1</name>
+      <uri>model://Shelf_Unit</uri>
+      <pose> 2.405 0.0 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <name>Crate_0_0_1</name>
+      <uri>model://Crate</uri>
+      <pose> 2.923 0.0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>Crate_1_0_1</name>
+      <uri>model://Crate</uri>
+      <pose> 1.8869999999999998 0.0 0 0 0 0</pose>
+    </include>
+
+    
+    
+    
+    <include>
+      <name>Shelf_Unit_2</name>
+      <uri>model://Shelf_Unit</uri>
+      <pose> 4.81 0.0 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <name>Crate_0_0_2</name>
+      <uri>model://Crate</uri>
+      <pose> 5.327999999999999 0.0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>Crate_1_0_2</name>
+      <uri>model://Crate</uri>
+      <pose> 4.292 0.0 0 0 0 0</pose>
+    </include>
+
+    
+    
+    
+    <include>
+      <name>Shelf_Unit_3</name>
+      <uri>model://Shelf_Unit</uri>
+      <pose> 7.215 0.0 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <name>Crate_0_0_3</name>
+      <uri>model://Crate</uri>
+      <pose> 7.733 0.0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>Crate_1_0_3</name>
+      <uri>model://Crate</uri>
+      <pose> 6.697 0.0 0 0 0 0</pose>
+    </include>
+
+    
+    
+    
+    <include>
+      <name>Shelf_Unit_4</name>
+      <uri>model://Shelf_Unit</uri>
+      <pose> 9.62 0.0 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <name>Crate_0_0_4</name>
+      <uri>model://Crate</uri>
+      <pose> 10.138 0.0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>Crate_1_0_4</name>
+      <uri>model://Crate</uri>
+      <pose> 9.101999999999999 0.0 0 0 0 0</pose>
+    </include>
+
+    
+    
+    
+    <include>
+      <name>Shelf_Unit_5</name>
+      <uri>model://Shelf_Unit</uri>
+      <pose> 12.024999999999999 0.0 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <name>Crate_0_0_5</name>
+      <uri>model://Crate</uri>
+      <pose> 12.543 0.0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>Crate_1_0_5</name>
+      <uri>model://Crate</uri>
+      <pose> 11.506999999999998 0.0 0 0 0 0</pose>
+    </include>
+
+    
+    
+    
+    <include>
+      <name>Shelf_Unit_6</name>
+      <uri>model://Shelf_Unit</uri>
+      <pose> 14.43 0.0 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <name>Crate_0_0_6</name>
+      <uri>model://Crate</uri>
+      <pose> 14.948 0.0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>Crate_1_0_6</name>
+      <uri>model://Crate</uri>
+      <pose> 13.911999999999999 0.0 0 0 0 0</pose>
+    </include>
+
+    
+    
+    
+    <include>
+      <name>Shelf_Unit_7</name>
+      <uri>model://Shelf_Unit</uri>
+      <pose> 16.834999999999997 0.0 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <name>Crate_0_0_7</name>
+      <uri>model://Crate</uri>
+      <pose> 17.352999999999998 0.0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>Crate_1_0_7</name>
+      <uri>model://Crate</uri>
+      <pose> 16.316999999999997 0.0 0 0 0 0</pose>
+    </include>
+
+    
+    
+    
+    <include>
+      <name>Shelf_Unit_8</name>
+      <uri>model://Shelf_Unit</uri>
+      <pose> 19.24 0.0 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <name>Crate_0_0_8</name>
+      <uri>model://Crate</uri>
+      <pose> 19.758 0.0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>Crate_1_0_8</name>
+      <uri>model://Crate</uri>
+      <pose> 18.721999999999998 0.0 0 0 0 0</pose>
+    </include>
+
+    
+    
+    
+    <include>
+      <name>Shelf_Unit_9</name>
+      <uri>model://Shelf_Unit</uri>
+      <pose> 21.645 0.0 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <name>Crate_0_0_9</name>
+      <uri>model://Crate</uri>
+      <pose> 22.163 0.0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>Crate_1_0_9</name>
+      <uri>model://Crate</uri>
+      <pose> 21.127 0.0 0 0 0 0</pose>
+    </include>
+
+    
+    
+    
+    <include>
+      <name>Shelf_Unit_10</name>
+      <uri>model://Shelf_Unit</uri>
+      <pose> 24.049999999999997 0.0 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <name>Crate_0_0_10</name>
+      <uri>model://Crate</uri>
+      <pose> 24.567999999999998 0.0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>Crate_1_0_10</name>
+      <uri>model://Crate</uri>
+      <pose> 23.531999999999996 0.0 0 0 0 0</pose>
+    </include>
+
+    
+    
+    
+    <include>
+      <name>Shelf_Unit_11</name>
+      <uri>model://Shelf_Unit</uri>
+      <pose> 26.455 0.0 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <name>Crate_0_0_11</name>
+      <uri>model://Crate</uri>
+      <pose> 26.973 0.0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>Crate_1_0_11</name>
+      <uri>model://Crate</uri>
+      <pose> 25.936999999999998 0.0 0 0 0 0</pose>
+    </include>
+
+    
+    
+    
+    <include>
+      <name>Shelf_Unit_12</name>
+      <uri>model://Shelf_Unit</uri>
+      <pose> 28.86 0.0 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <name>Crate_0_0_12</name>
+      <uri>model://Crate</uri>
+      <pose> 29.378 0.0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>Crate_1_0_12</name>
+      <uri>model://Crate</uri>
+      <pose> 28.342 0.0 0 0 0 0</pose>
+    </include>
+
+    
+    
+    
+    <include>
+      <name>Shelf_Unit_13</name>
+      <uri>model://Shelf_Unit</uri>
+      <pose> 31.264999999999997 0.0 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <name>Crate_0_0_13</name>
+      <uri>model://Crate</uri>
+      <pose> 31.782999999999998 0.0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>Crate_1_0_13</name>
+      <uri>model://Crate</uri>
+      <pose> 30.746999999999996 0.0 0 0 0 0</pose>
+    </include>
+
+    
+    
+    
+    <include>
+      <name>Shelf_Unit_14</name>
+      <uri>model://Shelf_Unit</uri>
+      <pose> 33.669999999999995 0.0 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <name>Crate_0_0_14</name>
+      <uri>model://Crate</uri>
+      <pose> 34.187999999999995 0.0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>Crate_1_0_14</name>
+      <uri>model://Crate</uri>
+      <pose> 33.151999999999994 0.0 0 0 0 0</pose>
+    </include>
+
+    
+    
+    
+    <include>
+      <name>Shelf_Unit_15</name>
+      <uri>model://Shelf_Unit</uri>
+      <pose> 36.074999999999996 0.0 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <name>Crate_0_0_15</name>
+      <uri>model://Crate</uri>
+      <pose> 36.592999999999996 0.0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>Crate_1_0_15</name>
+      <uri>model://Crate</uri>
+      <pose> 35.556999999999995 0.0 0 0 0 0</pose>
+    </include>
+
+    
+    
+    
+    <include>
+      <name>Shelf_Unit_16</name>
+      <uri>model://Shelf_Unit</uri>
+      <pose> 38.48 0.0 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <name>Crate_0_0_16</name>
+      <uri>model://Crate</uri>
+      <pose> 38.998 0.0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>Crate_1_0_16</name>
+      <uri>model://Crate</uri>
+      <pose> 37.961999999999996 0.0 0 0 0 0</pose>
+    </include>
+
+    
+    
+    
+    <include>
+      <name>Shelf_Unit_17</name>
+      <uri>model://Shelf_Unit</uri>
+      <pose> 40.885 0.0 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <name>Crate_0_0_17</name>
+      <uri>model://Crate</uri>
+      <pose> 41.403 0.0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>Crate_1_0_17</name>
+      <uri>model://Crate</uri>
+      <pose> 40.367 0.0 0 0 0 0</pose>
+    </include>
+
+    
+    
+    
+    <include>
+      <name>Shelf_Unit_18</name>
+      <uri>model://Shelf_Unit</uri>
+      <pose> 43.29 0.0 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <name>Crate_0_0_18</name>
+      <uri>model://Crate</uri>
+      <pose> 43.808 0.0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>Crate_1_0_18</name>
+      <uri>model://Crate</uri>
+      <pose> 42.772 0.0 0 0 0 0</pose>
+    </include>
+
+    
+    
+    
+    <include>
+      <name>Shelf_Unit_19</name>
+      <uri>model://Shelf_Unit</uri>
+      <pose> 45.69499999999999 0.0 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <name>Crate_0_0_19</name>
+      <uri>model://Crate</uri>
+      <pose> 46.212999999999994 0.0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>Crate_1_0_19</name>
+      <uri>model://Crate</uri>
+      <pose> 45.17699999999999 0.0 0 0 0 0</pose>
+    </include>
+
+    
+    
+    
+    <include>
+      <name>Shelf_Unit_20</name>
+      <uri>model://Shelf_Unit</uri>
+      <pose> 48.099999999999994 0.0 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <name>Crate_0_0_20</name>
+      <uri>model://Crate</uri>
+      <pose> 48.617999999999995 0.0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>Crate_1_0_20</name>
+      <uri>model://Crate</uri>
+      <pose> 47.581999999999994 0.0 0 0 0 0</pose>
+    </include>
+
+    
+    
+    
+    <include>
+      <name>Shelf_Unit_21</name>
+      <uri>model://Shelf_Unit</uri>
+      <pose> 50.504999999999995 0.0 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <name>Crate_0_0_21</name>
+      <uri>model://Crate</uri>
+      <pose> 51.022999999999996 0.0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>Crate_1_0_21</name>
+      <uri>model://Crate</uri>
+      <pose> 49.986999999999995 0.0 0 0 0 0</pose>
+    </include>
+
+    
+    
+    
+    <include>
+      <name>Shelf_Unit_22</name>
+      <uri>model://Shelf_Unit</uri>
+      <pose> 52.91 0.0 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <name>Crate_0_0_22</name>
+      <uri>model://Crate</uri>
+      <pose> 53.428 0.0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>Crate_1_0_22</name>
+      <uri>model://Crate</uri>
+      <pose> 52.391999999999996 0.0 0 0 0 0</pose>
+    </include>
+
+    
+    
+    
+    <include>
+      <name>Shelf_Unit_23</name>
+      <uri>model://Shelf_Unit</uri>
+      <pose> 55.315 0.0 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <name>Crate_0_0_23</name>
+      <uri>model://Crate</uri>
+      <pose> 55.833 0.0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>Crate_1_0_23</name>
+      <uri>model://Crate</uri>
+      <pose> 54.797 0.0 0 0 0 0</pose>
+    </include>
+
+    
+    
+    
+    <include>
+      <name>Shelf_Unit_24</name>
+      <uri>model://Shelf_Unit</uri>
+      <pose> 57.72 0.0 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <name>Crate_0_0_24</name>
+      <uri>model://Crate</uri>
+      <pose> 58.238 0.0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>Crate_1_0_24</name>
+      <uri>model://Crate</uri>
+      <pose> 57.202 0.0 0 0 0 0</pose>
+    </include>
+
+    
+    
+    
+  </model>
+</sdf>

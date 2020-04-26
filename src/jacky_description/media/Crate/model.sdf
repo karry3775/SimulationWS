@@ -1,0 +1,43 @@
+<?xml version='1.0'?>
+<sdf version='1.6'>
+  <model name='Crate'>
+    <link name='crate'>
+      <pose frame=''>0 0 0.535 0 -0 0</pose>
+      <inertial>
+        <mass>10</mass>
+        <inertia>
+          <ixx>5</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>5</iyy>
+          <iyz>0</iyz>
+          <izz>5</izz>
+        </inertia>
+      </inertial>
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <enable_wind>0</enable_wind>
+      <visual name='visual'>
+        <pose frame=''>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://Crate/meshes/crate_flipped_.dae</uri>
+          </mesh>
+        </geometry>
+        <transparency>0</transparency>
+        <cast_shadows>0</cast_shadows>
+      </visual>
+      <collision name='collision'>
+        <laser_retro>0</laser_retro>
+        <pose frame=''>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://Crate/meshes/crate_flipped_.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <static>1</static>
+  </model>
+</sdf>

@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<sdf version="1.6">
+  <model name="5_Shelf">
+    <include>
+      <uri>model://simulation_robots_worlds/media/Shelf_Side</uri>
+      <pose>-1.2025 0 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://simulation_robots_worlds/media/Shelf_Unit</uri>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://simulation_robots_worlds/media/Shelf_Unit</uri>
+      <pose>2.405 0 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://simulation_robots_worlds/media/Shelf_Unit</uri>
+      <pose>4.81 0 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://simulation_robots_worlds/media/Shelf_Unit</uri>
+      <pose>7.215 0 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://simulation_robots_worlds/media/Shelf_Unit</uri>
+      <pose>9.62 0 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://simulation_robots_worlds/media/Shelf_Side</uri>
+      <pose>-1.2025 1.268875 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://simulation_robots_worlds/media/Shelf_Unit</uri>
+      <pose>0 1.268875 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://simulation_robots_worlds/media/Shelf_Unit</uri>
+      <pose>2.405 1.268875 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://simulation_robots_worlds/media/Shelf_Unit</uri>
+      <pose>4.81 1.268875 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://simulation_robots_worlds/media/Shelf_Unit</uri>
+      <pose>7.215 1.268875 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://simulation_robots_worlds/media/Shelf_Unit</uri>
+      <pose>9.62 1.268875 0 0 0 0</pose>
+    </include>
+  </model>
+</sdf>

@@ -1,0 +1,18 @@
+material stocked/aluminium_corrugated
+{
+	technique
+	{
+		pass
+		{
+			ambient 1.0 1.0 1.0 1.0
+			diffuse 0.64 0.64 0.64 1.0
+			specular 0.5 0.5 0.5 1.0 
+
+			texture_unit
+			{
+				texture aluminium_corrugated.jpg
+				scale 0.008 0.0028
+			}
+		}
+	}
+}

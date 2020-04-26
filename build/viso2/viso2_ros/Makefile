@@ -483,6 +483,21 @@ nav_msgs_generate_messages_cpp/fast:
 .PHONY : nav_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/rule
+
+# Convenience name for target.
+stereo_odometer_raw: viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/rule
+
+.PHONY : stereo_odometer_raw
+
+# fast build rule for target.
+stereo_odometer_raw/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/build
+.PHONY : stereo_odometer_raw/fast
+
+# Convenience name for target.
 viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule:
 	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
 .PHONY : viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
@@ -983,6 +998,33 @@ src/stereo_odometer.cpp.s:
 	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/src/stereo_odometer.cpp.s
 .PHONY : src/stereo_odometer.cpp.s
 
+src/stereo_odometer_raw.o: src/stereo_odometer_raw.cpp.o
+
+.PHONY : src/stereo_odometer_raw.o
+
+# target to build an object file
+src/stereo_odometer_raw.cpp.o:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/src/stereo_odometer_raw.cpp.o
+.PHONY : src/stereo_odometer_raw.cpp.o
+
+src/stereo_odometer_raw.i: src/stereo_odometer_raw.cpp.i
+
+.PHONY : src/stereo_odometer_raw.i
+
+# target to preprocess a source file
+src/stereo_odometer_raw.cpp.i:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/src/stereo_odometer_raw.cpp.i
+.PHONY : src/stereo_odometer_raw.cpp.i
+
+src/stereo_odometer_raw.s: src/stereo_odometer_raw.cpp.s
+
+.PHONY : src/stereo_odometer_raw.s
+
+# target to generate assembly for a file
+src/stereo_odometer_raw.cpp.s:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/src/stereo_odometer_raw.cpp.s
+.PHONY : src/stereo_odometer_raw.cpp.s
+
 src/stereo_odometer_upward.o: src/stereo_odometer_upward.cpp.o
 
 .PHONY : src/stereo_odometer_upward.o
@@ -1206,6 +1248,7 @@ help:
 	@echo "... nodelet_topic_tools_gencfg"
 	@echo "... nav_msgs_generate_messages_cpp"
 	@echo "... edit_cache"
+	@echo "... stereo_odometer_raw"
 	@echo "... nav_msgs_generate_messages_lisp"
 	@echo "... nodelet_generate_messages_cpp"
 	@echo "... bond_generate_messages_py"
@@ -1243,6 +1286,9 @@ help:
 	@echo "... src/stereo_odometer.o"
 	@echo "... src/stereo_odometer.i"
 	@echo "... src/stereo_odometer.s"
+	@echo "... src/stereo_odometer_raw.o"
+	@echo "... src/stereo_odometer_raw.i"
+	@echo "... src/stereo_odometer_raw.s"
 	@echo "... src/stereo_odometer_upward.o"
 	@echo "... src/stereo_odometer_upward.i"
 	@echo "... src/stereo_odometer_upward.s"
