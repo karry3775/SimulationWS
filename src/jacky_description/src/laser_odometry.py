@@ -3,6 +3,7 @@ import rospy
 from nav_msgs.msg import Odometry
 from tf.transformations import euler_from_quaternion, quaternion_from_euler
 import matplotlib.pyplot as plt
+from sensor_msgs.msg import Imu
 
 rospy.init_node("laser_odometry_node")
 
@@ -26,6 +27,9 @@ laser_corrected_x = []
 laser_corrected_y = []
 laser_corrected_yaw = []
 laser_corrected_time = []
+
+imu_x = []
+imu_y = []
 
 def laser_cb(msg):
     global laser_x, laser_y, laser_time, laser_yaw
@@ -89,6 +93,7 @@ if __name__ == "__main__":
         gt_sub = rospy.Subscriber("/odom", Odometry, gt_cb)
         laser_corrected_sub = rospy.Subscriber("/odom_rf2o_corrected", Odometry, laser_corrected_cb)
         laser_raw_sub = rospy.Subscriber("/odom_rf2o_raw", Odometry, laser_raw_cb)
+        imu_sub = rospy.Subscriber("/imu_odom", Odometry, imu_cb)
         rospy.spin()
 
         # find the associated errors
@@ -98,13 +103,13 @@ if __name__ == "__main__":
         axs[0].set_aspect('equal')
         axs[0].set_title("Trajectory")
         axs[0].plot(gt_x, gt_y, 'r-', label = "gt")
-        # axs[0].plot(laser_x, laser_y, 'b-', label = "laser")
+        axs[0].plot(laser_x, laser_y, 'b-', label = "laser")
         axs[0].plot(laser_corrected_x, laser_corrected_y, 'm-', label = "laser_corrected")
         axs[0].plot(laser_raw_x, laser_raw_y, 'g-', label = "laser_raw")
 
         axs[1].set_title("Yaw")
         axs[1].plot(gt_time, gt_yaw, 'r-', label = "gt")
-        # axs[1].plot(laser_time, laser_yaw, 'bo-', label = "laser")
+        axs[1].plot(laser_time, laser_yaw, 'bo-', label = "laser")
         axs[1].plot(laser_corrected_time, laser_corrected_yaw, 'm-', label = "laser_corrected")
         axs[1].plot(laser_raw_time, laser_raw_yaw, 'g-', label = "laser_raw")
 

@@ -169,7 +169,7 @@
  <eye_upward parent = "head_U" lr = "right_upward" tY = "1"/>
 
   <!-- Imu -->
-  <link name = "imu_sensor_link">
+  <link name = "imu_link">
     <collision>
       <origin xyz = "0 0 0" rpy = "0 0 0"/>
       <geometry>
@@ -194,7 +194,7 @@
     <axis xyz = "0 0 1"/>
     <origin xyz = "0 0 0" rpy = "0 0 0"/>
     <parent link = "link_jacky_chassis"/>
-    <child link = "imu_sensor_link"/>
+    <child link = "imu_link"/>
   </joint>
 
   <!--laser sensor -->
