@@ -56,40 +56,6 @@ CMAKE_BINARY_DIR = /home/kartik/Documents/gazebo_practice_ws/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -101,6 +67,27 @@ install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
@@ -114,15 +101,28 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
+# Special rule for the target test
+test/fast: test
 
-.PHONY : list_install_components/fast
+.PHONY : test/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -168,19 +168,64 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-viso2/viso2_ros/CMakeFiles/viso2_ros_gennodejs.dir/rule:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/viso2_ros_gennodejs.dir/rule
-.PHONY : viso2/viso2_ros/CMakeFiles/viso2_ros_gennodejs.dir/rule
+viso2/viso2_ros/CMakeFiles/mono_odometer.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/mono_odometer.dir/rule
 
 # Convenience name for target.
-viso2_ros_gennodejs: viso2/viso2_ros/CMakeFiles/viso2_ros_gennodejs.dir/rule
+mono_odometer: viso2/viso2_ros/CMakeFiles/mono_odometer.dir/rule
 
-.PHONY : viso2_ros_gennodejs
+.PHONY : mono_odometer
 
 # fast build rule for target.
-viso2_ros_gennodejs/fast:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_gennodejs.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_gennodejs.dir/build
-.PHONY : viso2_ros_gennodejs/fast
+mono_odometer/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/mono_odometer.dir/build.make viso2/viso2_ros/CMakeFiles/mono_odometer.dir/build
+.PHONY : mono_odometer/fast
+
+# Convenience name for target.
+viso2/viso2_ros/CMakeFiles/stereo_odometer_without_yaw_correction.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/stereo_odometer_without_yaw_correction.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/stereo_odometer_without_yaw_correction.dir/rule
+
+# Convenience name for target.
+stereo_odometer_without_yaw_correction: viso2/viso2_ros/CMakeFiles/stereo_odometer_without_yaw_correction.dir/rule
+
+.PHONY : stereo_odometer_without_yaw_correction
+
+# fast build rule for target.
+stereo_odometer_without_yaw_correction/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_without_yaw_correction.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_without_yaw_correction.dir/build
+.PHONY : stereo_odometer_without_yaw_correction/fast
+
+# Convenience name for target.
+viso2/viso2_ros/CMakeFiles/stereo_odometer_with_dely_assumption.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/stereo_odometer_with_dely_assumption.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/stereo_odometer_with_dely_assumption.dir/rule
+
+# Convenience name for target.
+stereo_odometer_with_dely_assumption: viso2/viso2_ros/CMakeFiles/stereo_odometer_with_dely_assumption.dir/rule
+
+.PHONY : stereo_odometer_with_dely_assumption
+
+# fast build rule for target.
+stereo_odometer_with_dely_assumption/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_with_dely_assumption.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_with_dely_assumption.dir/build
+.PHONY : stereo_odometer_with_dely_assumption/fast
+
+# Convenience name for target.
+viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/rule
+
+# Convenience name for target.
+stereo_odometer: viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/rule
+
+.PHONY : stereo_odometer
+
+# fast build rule for target.
+stereo_odometer/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/build
+.PHONY : stereo_odometer/fast
 
 # Convenience name for target.
 viso2/viso2_ros/CMakeFiles/mono_odometer_omnidirectional.dir/rule:
@@ -213,6 +258,96 @@ viso2_ros_genpy/fast:
 .PHONY : viso2_ros_genpy/fast
 
 # Convenience name for target.
+viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_py.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_py.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_py.dir/rule
+
+# Convenience name for target.
+viso2_ros_generate_messages_py: viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_py.dir/rule
+
+.PHONY : viso2_ros_generate_messages_py
+
+# fast build rule for target.
+viso2_ros_generate_messages_py/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_py.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_py.dir/build
+.PHONY : viso2_ros_generate_messages_py/fast
+
+# Convenience name for target.
+viso2/viso2_ros/CMakeFiles/viso2_ros_gennodejs.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/viso2_ros_gennodejs.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/viso2_ros_gennodejs.dir/rule
+
+# Convenience name for target.
+viso2_ros_gennodejs: viso2/viso2_ros/CMakeFiles/viso2_ros_gennodejs.dir/rule
+
+.PHONY : viso2_ros_gennodejs
+
+# fast build rule for target.
+viso2_ros_gennodejs/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_gennodejs.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_gennodejs.dir/build
+.PHONY : viso2_ros_gennodejs/fast
+
+# Convenience name for target.
+viso2/viso2_ros/CMakeFiles/bond_generate_messages_nodejs.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/bond_generate_messages_nodejs.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/bond_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+bond_generate_messages_nodejs: viso2/viso2_ros/CMakeFiles/bond_generate_messages_nodejs.dir/rule
+
+.PHONY : bond_generate_messages_nodejs
+
+# fast build rule for target.
+bond_generate_messages_nodejs/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/bond_generate_messages_nodejs.dir/build.make viso2/viso2_ros/CMakeFiles/bond_generate_messages_nodejs.dir/build
+.PHONY : bond_generate_messages_nodejs/fast
+
+# Convenience name for target.
+viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_py.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_py.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_py.dir/rule
+
+# Convenience name for target.
+nodelet_generate_messages_py: viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_py.dir/rule
+
+.PHONY : nodelet_generate_messages_py
+
+# fast build rule for target.
+nodelet_generate_messages_py/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_py.dir/build.make viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_py.dir/build
+.PHONY : nodelet_generate_messages_py/fast
+
+# Convenience name for target.
+viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_py.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_py: viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+
+.PHONY : nav_msgs_generate_messages_py
+
+# fast build rule for target.
+nav_msgs_generate_messages_py/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_py.dir/build
+.PHONY : nav_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_lisp.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+nodelet_generate_messages_lisp: viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
+
+.PHONY : nodelet_generate_messages_lisp
+
+# fast build rule for target.
+nodelet_generate_messages_lisp/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_lisp.dir/build
+.PHONY : nodelet_generate_messages_lisp/fast
+
+# Convenience name for target.
 viso2/viso2_ros/CMakeFiles/stereo_odometer_upward.dir/rule:
 	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/stereo_odometer_upward.dir/rule
 .PHONY : viso2/viso2_ros/CMakeFiles/stereo_odometer_upward.dir/rule
@@ -228,19 +363,259 @@ stereo_odometer_upward/fast:
 .PHONY : stereo_odometer_upward/fast
 
 # Convenience name for target.
-viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_cpp.dir/rule:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_cpp.dir/rule
-.PHONY : viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_cpp.dir/rule
+viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-viso2_ros_generate_messages_cpp: viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_cpp.dir/rule
+topic_tools_generate_messages_cpp: viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
 
-.PHONY : viso2_ros_generate_messages_cpp
+.PHONY : topic_tools_generate_messages_cpp
 
 # fast build rule for target.
-viso2_ros_generate_messages_cpp/fast:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_cpp.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_cpp.dir/build
-.PHONY : viso2_ros_generate_messages_cpp/fast
+topic_tools_generate_messages_cpp/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_cpp.dir/build.make viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_cpp.dir/build
+.PHONY : topic_tools_generate_messages_cpp/fast
+
+# Convenience name for target.
+viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_eus: viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
+
+.PHONY : nav_msgs_generate_messages_eus
+
+# fast build rule for target.
+nav_msgs_generate_messages_eus/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_eus.dir/build.make viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_eus.dir/build
+.PHONY : nav_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+viso2/viso2_ros/CMakeFiles/stereo_odometer_without_cmd_vel.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/stereo_odometer_without_cmd_vel.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/stereo_odometer_without_cmd_vel.dir/rule
+
+# Convenience name for target.
+stereo_odometer_without_cmd_vel: viso2/viso2_ros/CMakeFiles/stereo_odometer_without_cmd_vel.dir/rule
+
+.PHONY : stereo_odometer_without_cmd_vel
+
+# fast build rule for target.
+stereo_odometer_without_cmd_vel/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_without_cmd_vel.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_without_cmd_vel.dir/build
+.PHONY : stereo_odometer_without_cmd_vel/fast
+
+# Convenience name for target.
+viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_nodejs: viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : nav_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+nav_msgs_generate_messages_nodejs/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build
+.PHONY : nav_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+viso2/viso2_ros/CMakeFiles/bond_generate_messages_lisp.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/bond_generate_messages_lisp.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/bond_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+bond_generate_messages_lisp: viso2/viso2_ros/CMakeFiles/bond_generate_messages_lisp.dir/rule
+
+.PHONY : bond_generate_messages_lisp
+
+# fast build rule for target.
+bond_generate_messages_lisp/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/bond_generate_messages_lisp.dir/build.make viso2/viso2_ros/CMakeFiles/bond_generate_messages_lisp.dir/build
+.PHONY : bond_generate_messages_lisp/fast
+
+# Convenience name for target.
+viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+topic_tools_generate_messages_lisp: viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
+
+.PHONY : topic_tools_generate_messages_lisp
+
+# fast build rule for target.
+topic_tools_generate_messages_lisp/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_lisp.dir/build.make viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_lisp.dir/build
+.PHONY : topic_tools_generate_messages_lisp/fast
+
+# Convenience name for target.
+viso2/viso2_ros/CMakeFiles/nodelet_topic_tools_gencfg.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/nodelet_topic_tools_gencfg.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/nodelet_topic_tools_gencfg.dir/rule
+
+# Convenience name for target.
+nodelet_topic_tools_gencfg: viso2/viso2_ros/CMakeFiles/nodelet_topic_tools_gencfg.dir/rule
+
+.PHONY : nodelet_topic_tools_gencfg
+
+# fast build rule for target.
+nodelet_topic_tools_gencfg/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/nodelet_topic_tools_gencfg.dir/build.make viso2/viso2_ros/CMakeFiles/nodelet_topic_tools_gencfg.dir/build
+.PHONY : nodelet_topic_tools_gencfg/fast
+
+# Convenience name for target.
+viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_cpp: viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : nav_msgs_generate_messages_cpp
+
+# fast build rule for target.
+nav_msgs_generate_messages_cpp/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
+.PHONY : nav_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/rule
+
+# Convenience name for target.
+stereo_odometer_raw: viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/rule
+
+.PHONY : stereo_odometer_raw
+
+# fast build rule for target.
+stereo_odometer_raw/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/build
+.PHONY : stereo_odometer_raw/fast
+
+# Convenience name for target.
+viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_lisp: viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : nav_msgs_generate_messages_lisp
+
+# fast build rule for target.
+nav_msgs_generate_messages_lisp/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make viso2/viso2_ros/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
+.PHONY : nav_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_cpp.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+nodelet_generate_messages_cpp: viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
+
+.PHONY : nodelet_generate_messages_cpp
+
+# fast build rule for target.
+nodelet_generate_messages_cpp/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_cpp.dir/build
+.PHONY : nodelet_generate_messages_cpp/fast
+
+# Convenience name for target.
+viso2/viso2_ros/CMakeFiles/bond_generate_messages_py.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/bond_generate_messages_py.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/bond_generate_messages_py.dir/rule
+
+# Convenience name for target.
+bond_generate_messages_py: viso2/viso2_ros/CMakeFiles/bond_generate_messages_py.dir/rule
+
+.PHONY : bond_generate_messages_py
+
+# fast build rule for target.
+bond_generate_messages_py/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/bond_generate_messages_py.dir/build.make viso2/viso2_ros/CMakeFiles/bond_generate_messages_py.dir/build
+.PHONY : bond_generate_messages_py/fast
+
+# Convenience name for target.
+viso2/viso2_ros/CMakeFiles/bond_generate_messages_eus.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/bond_generate_messages_eus.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/bond_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+bond_generate_messages_eus: viso2/viso2_ros/CMakeFiles/bond_generate_messages_eus.dir/rule
+
+.PHONY : bond_generate_messages_eus
+
+# fast build rule for target.
+bond_generate_messages_eus/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/bond_generate_messages_eus.dir/build.make viso2/viso2_ros/CMakeFiles/bond_generate_messages_eus.dir/build
+.PHONY : bond_generate_messages_eus/fast
+
+# Convenience name for target.
+viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+pcl_msgs_generate_messages_cpp: viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : pcl_msgs_generate_messages_cpp
+
+# fast build rule for target.
+pcl_msgs_generate_messages_cpp/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/build.make viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/build
+.PHONY : pcl_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_eus.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_eus.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+pcl_msgs_generate_messages_eus: viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_eus.dir/rule
+
+.PHONY : pcl_msgs_generate_messages_eus
+
+# fast build rule for target.
+pcl_msgs_generate_messages_eus/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_eus.dir/build.make viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_eus.dir/build
+.PHONY : pcl_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+nodelet_generate_messages_nodejs: viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
+
+.PHONY : nodelet_generate_messages_nodejs
+
+# fast build rule for target.
+nodelet_generate_messages_nodejs/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_nodejs.dir/build
+.PHONY : nodelet_generate_messages_nodejs/fast
+
+# Convenience name for target.
+viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+pcl_msgs_generate_messages_nodejs: viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : pcl_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+pcl_msgs_generate_messages_nodejs/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/build.make viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/build
+.PHONY : pcl_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_py.dir/rule:
@@ -258,19 +633,94 @@ pcl_msgs_generate_messages_py/fast:
 .PHONY : pcl_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-viso2/viso2_ros/CMakeFiles/mono_odometer.dir/rule:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/rule
-.PHONY : viso2/viso2_ros/CMakeFiles/mono_odometer.dir/rule
+viso2/viso2_ros/CMakeFiles/stereo_odometer_with_yaw_correction.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/stereo_odometer_with_yaw_correction.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/stereo_odometer_with_yaw_correction.dir/rule
 
 # Convenience name for target.
-mono_odometer: viso2/viso2_ros/CMakeFiles/mono_odometer.dir/rule
+stereo_odometer_with_yaw_correction: viso2/viso2_ros/CMakeFiles/stereo_odometer_with_yaw_correction.dir/rule
 
-.PHONY : mono_odometer
+.PHONY : stereo_odometer_with_yaw_correction
 
 # fast build rule for target.
-mono_odometer/fast:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/mono_odometer.dir/build.make viso2/viso2_ros/CMakeFiles/mono_odometer.dir/build
-.PHONY : mono_odometer/fast
+stereo_odometer_with_yaw_correction/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_with_yaw_correction.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_with_yaw_correction.dir/build
+.PHONY : stereo_odometer_with_yaw_correction/fast
+
+# Convenience name for target.
+viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+pcl_msgs_generate_messages_lisp: viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : pcl_msgs_generate_messages_lisp
+
+# fast build rule for target.
+pcl_msgs_generate_messages_lisp/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/build.make viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/build
+.PHONY : pcl_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_eus.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+topic_tools_generate_messages_eus: viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
+
+.PHONY : topic_tools_generate_messages_eus
+
+# fast build rule for target.
+topic_tools_generate_messages_eus/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_eus.dir/build.make viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_eus.dir/build
+.PHONY : topic_tools_generate_messages_eus/fast
+
+# Convenience name for target.
+viso2/viso2_ros/CMakeFiles/pcl_ros_gencfg.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/pcl_ros_gencfg.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/pcl_ros_gencfg.dir/rule
+
+# Convenience name for target.
+pcl_ros_gencfg: viso2/viso2_ros/CMakeFiles/pcl_ros_gencfg.dir/rule
+
+.PHONY : pcl_ros_gencfg
+
+# fast build rule for target.
+pcl_ros_gencfg/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/pcl_ros_gencfg.dir/build.make viso2/viso2_ros/CMakeFiles/pcl_ros_gencfg.dir/build
+.PHONY : pcl_ros_gencfg/fast
+
+# Convenience name for target.
+viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+topic_tools_generate_messages_nodejs: viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
+
+.PHONY : topic_tools_generate_messages_nodejs
+
+# fast build rule for target.
+topic_tools_generate_messages_nodejs/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_nodejs.dir/build.make viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_nodejs.dir/build
+.PHONY : topic_tools_generate_messages_nodejs/fast
+
+# Convenience name for target.
+viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_py.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_py.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_py.dir/rule
+
+# Convenience name for target.
+topic_tools_generate_messages_py: viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_py.dir/rule
+
+.PHONY : topic_tools_generate_messages_py
+
+# fast build rule for target.
+topic_tools_generate_messages_py/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_py.dir/build.make viso2/viso2_ros/CMakeFiles/topic_tools_generate_messages_py.dir/build
+.PHONY : topic_tools_generate_messages_py/fast
 
 # Convenience name for target.
 viso2/viso2_ros/CMakeFiles/stereo_odometer_with_cmd_vel.dir/rule:
@@ -303,6 +753,21 @@ _viso2_ros_generate_messages_check_deps_VisoInfo/fast:
 .PHONY : _viso2_ros_generate_messages_check_deps_VisoInfo/fast
 
 # Convenience name for target.
+viso2/viso2_ros/CMakeFiles/bond_generate_messages_cpp.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/bond_generate_messages_cpp.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/bond_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+bond_generate_messages_cpp: viso2/viso2_ros/CMakeFiles/bond_generate_messages_cpp.dir/rule
+
+.PHONY : bond_generate_messages_cpp
+
+# fast build rule for target.
+bond_generate_messages_cpp/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/bond_generate_messages_cpp.dir/build.make viso2/viso2_ros/CMakeFiles/bond_generate_messages_cpp.dir/build
+.PHONY : bond_generate_messages_cpp/fast
+
+# Convenience name for target.
 viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_nodejs.dir/rule:
 	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_nodejs.dir/rule
 .PHONY : viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_nodejs.dir/rule
@@ -333,34 +798,34 @@ viso2_ros_generate_messages/fast:
 .PHONY : viso2_ros_generate_messages/fast
 
 # Convenience name for target.
-viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule
-.PHONY : viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule
+viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_cpp.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_cpp.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-pcl_msgs_generate_messages_cpp: viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule
+viso2_ros_generate_messages_cpp: viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_cpp.dir/rule
 
-.PHONY : pcl_msgs_generate_messages_cpp
+.PHONY : viso2_ros_generate_messages_cpp
 
 # fast build rule for target.
-pcl_msgs_generate_messages_cpp/fast:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/build.make viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/build
-.PHONY : pcl_msgs_generate_messages_cpp/fast
+viso2_ros_generate_messages_cpp/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_cpp.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_cpp.dir/build
+.PHONY : viso2_ros_generate_messages_cpp/fast
 
 # Convenience name for target.
-viso2/viso2_ros/CMakeFiles/pcl_ros_gencfg.dir/rule:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/pcl_ros_gencfg.dir/rule
-.PHONY : viso2/viso2_ros/CMakeFiles/pcl_ros_gencfg.dir/rule
+viso2/viso2_ros/CMakeFiles/viso2_ros_gencpp.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/viso2_ros_gencpp.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/viso2_ros_gencpp.dir/rule
 
 # Convenience name for target.
-pcl_ros_gencfg: viso2/viso2_ros/CMakeFiles/pcl_ros_gencfg.dir/rule
+viso2_ros_gencpp: viso2/viso2_ros/CMakeFiles/viso2_ros_gencpp.dir/rule
 
-.PHONY : pcl_ros_gencfg
+.PHONY : viso2_ros_gencpp
 
 # fast build rule for target.
-pcl_ros_gencfg/fast:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/pcl_ros_gencfg.dir/build.make viso2/viso2_ros/CMakeFiles/pcl_ros_gencfg.dir/build
-.PHONY : pcl_ros_gencfg/fast
+viso2_ros_gencpp/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_gencpp.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_gencpp.dir/build
+.PHONY : viso2_ros_gencpp/fast
 
 # Convenience name for target.
 viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_eus.dir/rule:
@@ -376,6 +841,21 @@ viso2_ros_generate_messages_eus: viso2/viso2_ros/CMakeFiles/viso2_ros_generate_m
 viso2_ros_generate_messages_eus/fast:
 	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_eus.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_eus.dir/build
 .PHONY : viso2_ros_generate_messages_eus/fast
+
+# Convenience name for target.
+viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_eus.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_eus.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+nodelet_generate_messages_eus: viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_eus.dir/rule
+
+.PHONY : nodelet_generate_messages_eus
+
+# fast build rule for target.
+nodelet_generate_messages_eus/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_eus.dir/build.make viso2/viso2_ros/CMakeFiles/nodelet_generate_messages_eus.dir/build
+.PHONY : nodelet_generate_messages_eus/fast
 
 # Convenience name for target.
 viso2/viso2_ros/CMakeFiles/viso2_ros_genlisp.dir/rule:
@@ -408,36 +888,6 @@ viso2_ros_geneus/fast:
 .PHONY : viso2_ros_geneus/fast
 
 # Convenience name for target.
-viso2/viso2_ros/CMakeFiles/viso2_ros_gencpp.dir/rule:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/viso2_ros_gencpp.dir/rule
-.PHONY : viso2/viso2_ros/CMakeFiles/viso2_ros_gencpp.dir/rule
-
-# Convenience name for target.
-viso2_ros_gencpp: viso2/viso2_ros/CMakeFiles/viso2_ros_gencpp.dir/rule
-
-.PHONY : viso2_ros_gencpp
-
-# fast build rule for target.
-viso2_ros_gencpp/fast:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_gencpp.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_gencpp.dir/build
-.PHONY : viso2_ros_gencpp/fast
-
-# Convenience name for target.
-viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_lisp.dir/rule:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_lisp.dir/rule
-.PHONY : viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-viso2_ros_generate_messages_lisp: viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_lisp.dir/rule
-
-.PHONY : viso2_ros_generate_messages_lisp
-
-# fast build rule for target.
-viso2_ros_generate_messages_lisp/fast:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_lisp.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_lisp.dir/build
-.PHONY : viso2_ros_generate_messages_lisp/fast
-
-# Convenience name for target.
 viso2/viso2_ros/CMakeFiles/stereo_odometer_without_dely_assumption.dir/rule:
 	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/stereo_odometer_without_dely_assumption.dir/rule
 .PHONY : viso2/viso2_ros/CMakeFiles/stereo_odometer_without_dely_assumption.dir/rule
@@ -453,169 +903,19 @@ stereo_odometer_without_dely_assumption/fast:
 .PHONY : stereo_odometer_without_dely_assumption/fast
 
 # Convenience name for target.
-viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/rule
-.PHONY : viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/rule
+viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_lisp.dir/rule:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_lisp.dir/rule
+.PHONY : viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-pcl_msgs_generate_messages_nodejs: viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/rule
+viso2_ros_generate_messages_lisp: viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_lisp.dir/rule
 
-.PHONY : pcl_msgs_generate_messages_nodejs
+.PHONY : viso2_ros_generate_messages_lisp
 
 # fast build rule for target.
-pcl_msgs_generate_messages_nodejs/fast:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/build.make viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/build
-.PHONY : pcl_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_py.dir/rule:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_py.dir/rule
-.PHONY : viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_py.dir/rule
-
-# Convenience name for target.
-viso2_ros_generate_messages_py: viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_py.dir/rule
-
-.PHONY : viso2_ros_generate_messages_py
-
-# fast build rule for target.
-viso2_ros_generate_messages_py/fast:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_py.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_py.dir/build
-.PHONY : viso2_ros_generate_messages_py/fast
-
-# Convenience name for target.
-viso2/viso2_ros/CMakeFiles/nodelet_topic_tools_gencfg.dir/rule:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/nodelet_topic_tools_gencfg.dir/rule
-.PHONY : viso2/viso2_ros/CMakeFiles/nodelet_topic_tools_gencfg.dir/rule
-
-# Convenience name for target.
-nodelet_topic_tools_gencfg: viso2/viso2_ros/CMakeFiles/nodelet_topic_tools_gencfg.dir/rule
-
-.PHONY : nodelet_topic_tools_gencfg
-
-# fast build rule for target.
-nodelet_topic_tools_gencfg/fast:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/nodelet_topic_tools_gencfg.dir/build.make viso2/viso2_ros/CMakeFiles/nodelet_topic_tools_gencfg.dir/build
-.PHONY : nodelet_topic_tools_gencfg/fast
-
-# Convenience name for target.
-viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_eus.dir/rule:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_eus.dir/rule
-.PHONY : viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-pcl_msgs_generate_messages_eus: viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_eus.dir/rule
-
-.PHONY : pcl_msgs_generate_messages_eus
-
-# fast build rule for target.
-pcl_msgs_generate_messages_eus/fast:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_eus.dir/build.make viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_eus.dir/build
-.PHONY : pcl_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/rule:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/rule
-.PHONY : viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/rule
-
-# Convenience name for target.
-stereo_odometer: viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/rule
-
-.PHONY : stereo_odometer
-
-# fast build rule for target.
-stereo_odometer/fast:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/build
-.PHONY : stereo_odometer/fast
-
-# Convenience name for target.
-viso2/viso2_ros/CMakeFiles/stereo_odometer_without_cmd_vel.dir/rule:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/stereo_odometer_without_cmd_vel.dir/rule
-.PHONY : viso2/viso2_ros/CMakeFiles/stereo_odometer_without_cmd_vel.dir/rule
-
-# Convenience name for target.
-stereo_odometer_without_cmd_vel: viso2/viso2_ros/CMakeFiles/stereo_odometer_without_cmd_vel.dir/rule
-
-.PHONY : stereo_odometer_without_cmd_vel
-
-# fast build rule for target.
-stereo_odometer_without_cmd_vel/fast:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_without_cmd_vel.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_without_cmd_vel.dir/build
-.PHONY : stereo_odometer_without_cmd_vel/fast
-
-# Convenience name for target.
-viso2/viso2_ros/CMakeFiles/stereo_odometer_with_dely_assumption.dir/rule:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/stereo_odometer_with_dely_assumption.dir/rule
-.PHONY : viso2/viso2_ros/CMakeFiles/stereo_odometer_with_dely_assumption.dir/rule
-
-# Convenience name for target.
-stereo_odometer_with_dely_assumption: viso2/viso2_ros/CMakeFiles/stereo_odometer_with_dely_assumption.dir/rule
-
-.PHONY : stereo_odometer_with_dely_assumption
-
-# fast build rule for target.
-stereo_odometer_with_dely_assumption/fast:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_with_dely_assumption.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_with_dely_assumption.dir/build
-.PHONY : stereo_odometer_with_dely_assumption/fast
-
-# Convenience name for target.
-viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule
-.PHONY : viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-pcl_msgs_generate_messages_lisp: viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : pcl_msgs_generate_messages_lisp
-
-# fast build rule for target.
-pcl_msgs_generate_messages_lisp/fast:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/build.make viso2/viso2_ros/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/build
-.PHONY : pcl_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-viso2/viso2_ros/CMakeFiles/stereo_odometer_with_yaw_correction.dir/rule:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/stereo_odometer_with_yaw_correction.dir/rule
-.PHONY : viso2/viso2_ros/CMakeFiles/stereo_odometer_with_yaw_correction.dir/rule
-
-# Convenience name for target.
-stereo_odometer_with_yaw_correction: viso2/viso2_ros/CMakeFiles/stereo_odometer_with_yaw_correction.dir/rule
-
-.PHONY : stereo_odometer_with_yaw_correction
-
-# fast build rule for target.
-stereo_odometer_with_yaw_correction/fast:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_with_yaw_correction.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_with_yaw_correction.dir/build
-.PHONY : stereo_odometer_with_yaw_correction/fast
-
-# Convenience name for target.
-viso2/viso2_ros/CMakeFiles/stereo_odometer_without_yaw_correction.dir/rule:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/stereo_odometer_without_yaw_correction.dir/rule
-.PHONY : viso2/viso2_ros/CMakeFiles/stereo_odometer_without_yaw_correction.dir/rule
-
-# Convenience name for target.
-stereo_odometer_without_yaw_correction: viso2/viso2_ros/CMakeFiles/stereo_odometer_without_yaw_correction.dir/rule
-
-.PHONY : stereo_odometer_without_yaw_correction
-
-# fast build rule for target.
-stereo_odometer_without_yaw_correction/fast:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_without_yaw_correction.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_without_yaw_correction.dir/build
-.PHONY : stereo_odometer_without_yaw_correction/fast
-
-# Convenience name for target.
-viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/rule:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f CMakeFiles/Makefile2 viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/rule
-.PHONY : viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/rule
-
-# Convenience name for target.
-stereo_odometer_raw: viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/rule
-
-.PHONY : stereo_odometer_raw
-
-# fast build rule for target.
-stereo_odometer_raw/fast:
-	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer_raw.dir/build
-.PHONY : stereo_odometer_raw/fast
+viso2_ros_generate_messages_lisp/fast:
+	cd /home/kartik/Documents/gazebo_practice_ws/build && $(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_lisp.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_lisp.dir/build
+.PHONY : viso2_ros_generate_messages_lisp/fast
 
 src/mono_odometer.o: src/mono_odometer.cpp.o
 
@@ -920,43 +1220,63 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... viso2_ros_gennodejs"
-	@echo "... mono_odometer_omnidirectional"
-	@echo "... viso2_ros_genpy"
-	@echo "... stereo_odometer_upward"
-	@echo "... viso2_ros_generate_messages_cpp"
-	@echo "... pcl_msgs_generate_messages_py"
-	@echo "... mono_odometer"
-	@echo "... install"
-	@echo "... stereo_odometer_with_cmd_vel"
-	@echo "... _viso2_ros_generate_messages_check_deps_VisoInfo"
-	@echo "... viso2_ros_generate_messages_nodejs"
-	@echo "... viso2_ros_generate_messages"
-	@echo "... pcl_msgs_generate_messages_cpp"
-	@echo "... rebuild_cache"
-	@echo "... pcl_ros_gencfg"
-	@echo "... viso2_ros_generate_messages_eus"
-	@echo "... viso2_ros_genlisp"
-	@echo "... viso2_ros_geneus"
-	@echo "... viso2_ros_gencpp"
-	@echo "... viso2_ros_generate_messages_lisp"
-	@echo "... stereo_odometer_without_dely_assumption"
-	@echo "... pcl_msgs_generate_messages_nodejs"
-	@echo "... test"
-	@echo "... viso2_ros_generate_messages_py"
 	@echo "... install/local"
-	@echo "... nodelet_topic_tools_gencfg"
-	@echo "... pcl_msgs_generate_messages_eus"
-	@echo "... stereo_odometer"
-	@echo "... stereo_odometer_without_cmd_vel"
+	@echo "... list_install_components"
+	@echo "... rebuild_cache"
+	@echo "... mono_odometer"
+	@echo "... stereo_odometer_without_yaw_correction"
 	@echo "... install/strip"
 	@echo "... stereo_odometer_with_dely_assumption"
-	@echo "... pcl_msgs_generate_messages_lisp"
-	@echo "... stereo_odometer_with_yaw_correction"
-	@echo "... stereo_odometer_without_yaw_correction"
-	@echo "... list_install_components"
-	@echo "... stereo_odometer_raw"
+	@echo "... stereo_odometer"
+	@echo "... mono_odometer_omnidirectional"
+	@echo "... viso2_ros_genpy"
+	@echo "... test"
+	@echo "... viso2_ros_generate_messages_py"
+	@echo "... viso2_ros_gennodejs"
+	@echo "... bond_generate_messages_nodejs"
+	@echo "... nodelet_generate_messages_py"
+	@echo "... install"
+	@echo "... nav_msgs_generate_messages_py"
+	@echo "... nodelet_generate_messages_lisp"
+	@echo "... stereo_odometer_upward"
+	@echo "... topic_tools_generate_messages_cpp"
+	@echo "... nav_msgs_generate_messages_eus"
+	@echo "... stereo_odometer_without_cmd_vel"
+	@echo "... nav_msgs_generate_messages_nodejs"
+	@echo "... bond_generate_messages_lisp"
+	@echo "... topic_tools_generate_messages_lisp"
+	@echo "... nodelet_topic_tools_gencfg"
+	@echo "... nav_msgs_generate_messages_cpp"
 	@echo "... edit_cache"
+	@echo "... stereo_odometer_raw"
+	@echo "... nav_msgs_generate_messages_lisp"
+	@echo "... nodelet_generate_messages_cpp"
+	@echo "... bond_generate_messages_py"
+	@echo "... bond_generate_messages_eus"
+	@echo "... pcl_msgs_generate_messages_cpp"
+	@echo "... pcl_msgs_generate_messages_eus"
+	@echo "... nodelet_generate_messages_nodejs"
+	@echo "... pcl_msgs_generate_messages_nodejs"
+	@echo "... pcl_msgs_generate_messages_py"
+	@echo "... stereo_odometer_with_yaw_correction"
+	@echo "... pcl_msgs_generate_messages_lisp"
+	@echo "... topic_tools_generate_messages_eus"
+	@echo "... pcl_ros_gencfg"
+	@echo "... topic_tools_generate_messages_nodejs"
+	@echo "... topic_tools_generate_messages_py"
+	@echo "... stereo_odometer_with_cmd_vel"
+	@echo "... _viso2_ros_generate_messages_check_deps_VisoInfo"
+	@echo "... bond_generate_messages_cpp"
+	@echo "... viso2_ros_generate_messages_nodejs"
+	@echo "... viso2_ros_generate_messages"
+	@echo "... viso2_ros_generate_messages_cpp"
+	@echo "... viso2_ros_gencpp"
+	@echo "... viso2_ros_generate_messages_eus"
+	@echo "... nodelet_generate_messages_eus"
+	@echo "... viso2_ros_genlisp"
+	@echo "... viso2_ros_geneus"
+	@echo "... stereo_odometer_without_dely_assumption"
+	@echo "... viso2_ros_generate_messages_lisp"
 	@echo "... src/mono_odometer.o"
 	@echo "... src/mono_odometer.i"
 	@echo "... src/mono_odometer.s"

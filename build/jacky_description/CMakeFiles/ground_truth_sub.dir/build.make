@@ -57,76 +57,7 @@ include jacky_description/CMakeFiles/ground_truth_sub.dir/progress.make
 # Include the compile flags for this target's objects.
 include jacky_description/CMakeFiles/ground_truth_sub.dir/flags.make
 
-jacky_description/CMakeFiles/ground_truth_sub.dir/src/ground_truth_sub.cpp.o: jacky_description/CMakeFiles/ground_truth_sub.dir/flags.make
-jacky_description/CMakeFiles/ground_truth_sub.dir/src/ground_truth_sub.cpp.o: /home/kartik/Documents/gazebo_practice_ws/src/jacky_description/src/ground_truth_sub.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object jacky_description/CMakeFiles/ground_truth_sub.dir/src/ground_truth_sub.cpp.o"
-	cd /home/kartik/Documents/gazebo_practice_ws/build/jacky_description && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ground_truth_sub.dir/src/ground_truth_sub.cpp.o -c /home/kartik/Documents/gazebo_practice_ws/src/jacky_description/src/ground_truth_sub.cpp
-
-jacky_description/CMakeFiles/ground_truth_sub.dir/src/ground_truth_sub.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ground_truth_sub.dir/src/ground_truth_sub.cpp.i"
-	cd /home/kartik/Documents/gazebo_practice_ws/build/jacky_description && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kartik/Documents/gazebo_practice_ws/src/jacky_description/src/ground_truth_sub.cpp > CMakeFiles/ground_truth_sub.dir/src/ground_truth_sub.cpp.i
-
-jacky_description/CMakeFiles/ground_truth_sub.dir/src/ground_truth_sub.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ground_truth_sub.dir/src/ground_truth_sub.cpp.s"
-	cd /home/kartik/Documents/gazebo_practice_ws/build/jacky_description && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kartik/Documents/gazebo_practice_ws/src/jacky_description/src/ground_truth_sub.cpp -o CMakeFiles/ground_truth_sub.dir/src/ground_truth_sub.cpp.s
-
-jacky_description/CMakeFiles/ground_truth_sub.dir/src/ground_truth_sub.cpp.o.requires:
-
-.PHONY : jacky_description/CMakeFiles/ground_truth_sub.dir/src/ground_truth_sub.cpp.o.requires
-
-jacky_description/CMakeFiles/ground_truth_sub.dir/src/ground_truth_sub.cpp.o.provides: jacky_description/CMakeFiles/ground_truth_sub.dir/src/ground_truth_sub.cpp.o.requires
-	$(MAKE) -f jacky_description/CMakeFiles/ground_truth_sub.dir/build.make jacky_description/CMakeFiles/ground_truth_sub.dir/src/ground_truth_sub.cpp.o.provides.build
-.PHONY : jacky_description/CMakeFiles/ground_truth_sub.dir/src/ground_truth_sub.cpp.o.provides
-
-jacky_description/CMakeFiles/ground_truth_sub.dir/src/ground_truth_sub.cpp.o.provides.build: jacky_description/CMakeFiles/ground_truth_sub.dir/src/ground_truth_sub.cpp.o
-
-
-# Object files for target ground_truth_sub
-ground_truth_sub_OBJECTS = \
-"CMakeFiles/ground_truth_sub.dir/src/ground_truth_sub.cpp.o"
-
-# External object files for target ground_truth_sub
-ground_truth_sub_EXTERNAL_OBJECTS =
-
-/home/kartik/Documents/gazebo_practice_ws/devel/lib/jacky_description/ground_truth_sub: jacky_description/CMakeFiles/ground_truth_sub.dir/src/ground_truth_sub.cpp.o
-/home/kartik/Documents/gazebo_practice_ws/devel/lib/jacky_description/ground_truth_sub: jacky_description/CMakeFiles/ground_truth_sub.dir/build.make
-/home/kartik/Documents/gazebo_practice_ws/devel/lib/jacky_description/ground_truth_sub: /opt/ros/melodic/lib/liburdf.so
-/home/kartik/Documents/gazebo_practice_ws/devel/lib/jacky_description/ground_truth_sub: /usr/lib/x86_64-linux-gnu/liburdfdom_sensor.so
-/home/kartik/Documents/gazebo_practice_ws/devel/lib/jacky_description/ground_truth_sub: /usr/lib/x86_64-linux-gnu/liburdfdom_model_state.so
-/home/kartik/Documents/gazebo_practice_ws/devel/lib/jacky_description/ground_truth_sub: /usr/lib/x86_64-linux-gnu/liburdfdom_model.so
-/home/kartik/Documents/gazebo_practice_ws/devel/lib/jacky_description/ground_truth_sub: /usr/lib/x86_64-linux-gnu/liburdfdom_world.so
-/home/kartik/Documents/gazebo_practice_ws/devel/lib/jacky_description/ground_truth_sub: /usr/lib/x86_64-linux-gnu/libtinyxml.so
-/home/kartik/Documents/gazebo_practice_ws/devel/lib/jacky_description/ground_truth_sub: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
-/home/kartik/Documents/gazebo_practice_ws/devel/lib/jacky_description/ground_truth_sub: /opt/ros/melodic/lib/librosconsole_bridge.so
-/home/kartik/Documents/gazebo_practice_ws/devel/lib/jacky_description/ground_truth_sub: /opt/ros/melodic/lib/libroscpp.so
-/home/kartik/Documents/gazebo_practice_ws/devel/lib/jacky_description/ground_truth_sub: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/kartik/Documents/gazebo_practice_ws/devel/lib/jacky_description/ground_truth_sub: /usr/lib/x86_64-linux-gnu/libboost_signals.so
-/home/kartik/Documents/gazebo_practice_ws/devel/lib/jacky_description/ground_truth_sub: /opt/ros/melodic/lib/librosconsole.so
-/home/kartik/Documents/gazebo_practice_ws/devel/lib/jacky_description/ground_truth_sub: /opt/ros/melodic/lib/librosconsole_log4cxx.so
-/home/kartik/Documents/gazebo_practice_ws/devel/lib/jacky_description/ground_truth_sub: /opt/ros/melodic/lib/librosconsole_backend_interface.so
-/home/kartik/Documents/gazebo_practice_ws/devel/lib/jacky_description/ground_truth_sub: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-/home/kartik/Documents/gazebo_practice_ws/devel/lib/jacky_description/ground_truth_sub: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/kartik/Documents/gazebo_practice_ws/devel/lib/jacky_description/ground_truth_sub: /opt/ros/melodic/lib/libroscpp_serialization.so
-/home/kartik/Documents/gazebo_practice_ws/devel/lib/jacky_description/ground_truth_sub: /opt/ros/melodic/lib/libxmlrpcpp.so
-/home/kartik/Documents/gazebo_practice_ws/devel/lib/jacky_description/ground_truth_sub: /opt/ros/melodic/lib/librostime.so
-/home/kartik/Documents/gazebo_practice_ws/devel/lib/jacky_description/ground_truth_sub: /opt/ros/melodic/lib/libcpp_common.so
-/home/kartik/Documents/gazebo_practice_ws/devel/lib/jacky_description/ground_truth_sub: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/kartik/Documents/gazebo_practice_ws/devel/lib/jacky_description/ground_truth_sub: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/kartik/Documents/gazebo_practice_ws/devel/lib/jacky_description/ground_truth_sub: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/kartik/Documents/gazebo_practice_ws/devel/lib/jacky_description/ground_truth_sub: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/kartik/Documents/gazebo_practice_ws/devel/lib/jacky_description/ground_truth_sub: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-/home/kartik/Documents/gazebo_practice_ws/devel/lib/jacky_description/ground_truth_sub: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/kartik/Documents/gazebo_practice_ws/devel/lib/jacky_description/ground_truth_sub: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/kartik/Documents/gazebo_practice_ws/devel/lib/jacky_description/ground_truth_sub: jacky_description/CMakeFiles/ground_truth_sub.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kartik/Documents/gazebo_practice_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/kartik/Documents/gazebo_practice_ws/devel/lib/jacky_description/ground_truth_sub"
-	cd /home/kartik/Documents/gazebo_practice_ws/build/jacky_description && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ground_truth_sub.dir/link.txt --verbose=$(VERBOSE)
-
-# Rule to build all files generated by this target.
-jacky_description/CMakeFiles/ground_truth_sub.dir/build: /home/kartik/Documents/gazebo_practice_ws/devel/lib/jacky_description/ground_truth_sub
-
-.PHONY : jacky_description/CMakeFiles/ground_truth_sub.dir/build
-
-jacky_description/CMakeFiles/ground_truth_sub.dir/requires: jacky_description/CMakeFiles/ground_truth_sub.dir/src/ground_truth_sub.cpp.o.requires
+jacky_description/CMakeFiles/ground_truth_sub.dir/requires:
 
 .PHONY : jacky_description/CMakeFiles/ground_truth_sub.dir/requires
 
