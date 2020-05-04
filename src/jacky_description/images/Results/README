@@ -1,0 +1,51 @@
+README
+
+###############
+label - meaning
+###############
+gt              - ground_truth (red)
+laser           - laser readings without yaw correction (blue)
+laser_corrected - laser readings with yaw correction (magenta)
+vo              - Visual Odometry with yaw correction (green)
+gt_s            - ground truth starting location (red 'o' marker)
+gt_e            - ground truth ending location (red '*' marker)
+l_s             - laser starting location (blue 'o' marker)
+l_e             - laser ending location (blue '*' marker)
+lc_s            - laser corrected starting location (magenta 'o' marker)
+lc_e            - laser corrected ending location (magenta '*' marker)
+vo_s            - Visual Odometry starting location (green 'o' marker)
+vo_e            - Visual Odometry ending location (green '*' marker)
+
+#####################
+Meaning of plot names
+#####################
+# The plot names are of the format 'run<num>_traj.png' and 'run<num>_yaw.png'
+  These names correspond to the error plots on the google sheets indicated by column number Run number on the sheets.
+
+# There are some additional plots in the shared folder named 'warehouse' for which error plots are not available in the google sheets, since they were trial runs.
+
+####################
+Error plots
+####################
+# Error plots can be found in the 'results' google sheets.
+
+# It contains two sheets
+  - laser_stereo_comp --> contains data
+  - plot_compatible --> contains bar plots
+
+# X error means the longitudinal error
+# Y error means the latitudinal error
+# All lengths are in meters
+# All angles are in radians
+
+# There are a total of 3 types of  error terms
+  - Terminal error -> error recorded at the final point
+  - Average error -> error averaged over the entire trajectory
+  - % error -> Average error / traj length
+
+# The results are segregated by simulation environment used
+
+#######################
+Simulation Environments
+#######################
+# The simulation environments used can be found in 'simulation environment used' folder in png format

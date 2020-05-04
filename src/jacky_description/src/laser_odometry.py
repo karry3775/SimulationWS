@@ -93,7 +93,7 @@ if __name__ == "__main__":
         gt_sub = rospy.Subscriber("/odom", Odometry, gt_cb)
         laser_corrected_sub = rospy.Subscriber("/odom_rf2o_corrected", Odometry, laser_corrected_cb)
         laser_raw_sub = rospy.Subscriber("/odom_rf2o_raw", Odometry, laser_raw_cb)
-        imu_sub = rospy.Subscriber("/imu_odom", Odometry, imu_cb)
+
         rospy.spin()
 
         # find the associated errors
