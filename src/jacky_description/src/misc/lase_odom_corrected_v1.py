@@ -61,7 +61,7 @@ def combined_cb(msg_delta, msg_gt):
 
     x_raw = x_raw + delta_x_raw
     y_raw = y_raw + delta_y_raw
-    yaw_raw = yaw_raw + delta_yaw_raw
+    yaw_raw = wrapToPi(yaw_raw + delta_yaw_raw)
 
     ###
     q_raw = quaternion_from_euler(0,0,yaw_raw)

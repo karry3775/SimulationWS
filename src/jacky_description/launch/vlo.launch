@@ -1,0 +1,16 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<launch>
+  <!-- launch the environment -->
+  <include file = "/home/kartik/Documents/gazebo_practice_ws/src/jacky_description/launch/jacky_heb_world.launch"/>
+  <!-- launch rviz (otherwise joint publishers won't run as of current setup)-->
+  <include file = "/home/kartik/Documents/gazebo_practice_ws/src/jacky_description/launch/jacky_rviz.launch"/>
+  <!-- run the laser odometry file -->
+  <include file = "/home/kartik/Documents/laser_ws/src/rf2o_laser_odometry/launch/rf2o_laser_odometry.launch"/>
+
+  <!-- run the delta laser downsampled publisher -->
+  <node pkg = "jacky_description" type = "delta_laser_downsampled_publisher.py" name = "delta_laser_downsampled_publisher_node" output = "screen"/>
+  <!--  run the delta stereo publisher -->
+  <node pkg = "jacky_description" type = "delta_stereo_publisher.py" name = "delta_stereo_publisher_node" output ="screen"/>
+  <!--  run the odom rf2o corrected node-->
+  <node pkg = "jacky_description" type = "lase_odom_corrected_v1.py" name = "laser_odom_corrected_node" output = "screen" />
+</launch>
